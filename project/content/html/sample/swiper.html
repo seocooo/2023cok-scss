@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<title>Swiper | UI가이드</title>
+<!-- css -->
+<link rel="stylesheet" href="../../css/lib.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/common.css">
+
+<!-- javascript -->
+<script src="../../js/lib/jquery-3.6.4.min.js"></script>
+<script src="../../js/lib/sortable.js"></script>
+<script src="../../js/lib/swiper.min.js"></script>
+<script src="../../js/lib/modernizr.custom.min.js"></script>
+<script src="../../js/cock_ui.js"></script>
+</head>
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start"><h1>Swiper</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="title-group">
+			<strong class="title">일반타입</strong>
+		</div>
+		<div class="swiper">
+			<div id="swiper1" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" tabindex="0">
+						슬라이드1
+						<p>content</p>
+						<p>content</p>
+					</div>
+					<div class="swiper-slide" tabindex="0">슬라이드2</div>
+					<div class="swiper-slide" tabindex="0">슬라이드3</div>
+					<div class="swiper-slide" tabindex="0">슬라이드4</div>
+				</div>
+				<div class="swiper-button-contr">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">인디케이터 숫자타입</strong>
+		</div>
+		<div class="swiper">
+			<div id="swiper2" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" tabindex="0">슬라이드1</div>
+					<div class="swiper-slide" tabindex="0">슬라이드2</div>
+					<div class="swiper-slide" tabindex="0">슬라이드3</div>
+					<div class="swiper-slide" tabindex="0">슬라이드4</div>
+				</div>
+				<div class="swiper-button-contr">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<!-- <div class="swiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="txt">출하 시세와 배차, 병해충, 로컬푸드,<br>스마트팜, 영농교육까지 알려드려요</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="txt">내 지역 지원금부터 정부 보조금까지<br>나도 몰랐던 농업 보조금을 찾아드려요</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="txt">NH오늘농사 영농일지를 쓰면<br>서류를 따로 제출할 필요가 없어요</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="txt">궁금한 것은 물어보고 내 농사도 뽐내고<br>관심사가 같은 사람들끼리 소통해요</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div> -->
+
+		<div class="title-group">
+			<strong class="title">카드 슬라이드(가운데 정렬 view 2)</strong>
+		</div>
+		<div class="swiper st_card">
+			<div id="swiper3" class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" tabindex="0">
+						<a href="javascript:;" role="button" class="swiper-slide-cont">
+							<div class="swiper-title">NH모바일인증서</div>
+							<div class="swiper-content">
+								<img src="../../img/img_slide_certified_01.png" alt="보안인증서 아이콘" class="img_certified">
+							</div>
+							<div class="swiper-footer">
+								<div class="swiper-footer-txt">
+									<span>유효기간</span><span>2025.8.17</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide st_card_red" tabindex="0">
+						<a href="javascript:;" role="button" class="swiper-slide-cont">
+							<div class="swiper-title"><span>PASS</span>인증서</div>
+							<div class="swiper-content">
+								<img src="../../img/img_slide_certified_02.png" alt="패스인증서 아이콘" class="img_certified">
+							</div>
+							<div class="swiper-footer">
+								<div class="swiper-footer-txt">
+									<span>유효기간</span><span>2025.8.17</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide st_card_green" tabindex="0">
+						<a href="javascript:;" role="button" class="swiper-slide-cont">
+							<div class="swiper-title"><span>네이버</span>인증서</div>
+							<div class="swiper-content">
+								<img src="../../img/img_slide_certified_03.png" alt="네이버인증서 아이콘" class="img_certified">
+							</div>
+							<div class="swiper-footer">
+								<div class="swiper-footer-txt">
+									<span>유효기간</span><span>2025.8.17</span>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-button-contr">
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+<script>
+	// swiper 기본형
+	var swiper1 = new Swiper('#swiper1', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		pagination: {
+			el: '#swiper1 .swiper-pagination',
+			clickable: true
+		},
+		navigation: {
+			nextEl: '#swiper1 .swiper-button-next',
+			prevEl: '#swiper1 .swiper-button-prev'
+		},
+		on: {
+			init: function () {
+				$("#swiper1").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+				$("#swiper1").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr(
+					"tabindex", 0);
+				$(".swiper-pagination-bullet").each(function (index, item) {
+					$(item).attr("aria-label", index + 1 + "슬라이드로 가기");
+					$(item).removeAttr("aria-current")
+				});
+			},
+			slideChangeTransitionEnd: function () {
+				$("#swiper1").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+				$("#swiper1").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr(
+					"tabindex", 0);
+			},
+			slideChange: function () {
+				$(".swiper-pagination-bullet").each(function (index, item) {
+					$(this).attr({
+						"aria-label": index + 1 + '슬라이드'
+					});
+					// $(item).attr("aria-pressed",true);
+				});
+			}
+		}
+	});
+	// 숫자형 인디케이트
+	var swiper2 = new Swiper('#swiper2', {
+		slidesPerView: 1,
+		spaceBetween: 40,
+		pagination: {
+			el: '#swiper2 .swiper-pagination',
+			clickable: true,
+			type: "fraction",
+		},
+		navigation: {
+			nextEl: '#swiper2 .swiper-button-next',
+			prevEl: '#swiper2 .swiper-button-prev'
+		},
+		on: {
+			init: function () {
+				$("#swiper2").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+				$("#swiper2").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr(
+					"tabindex", 0);
+				$(".swiper-pagination-bullet").each(function (index, item) {
+					$(item).attr("aria-label", index + 1 + "슬라이드로 가기");
+					$(item).removeAttr("aria-current")
+				});
+			},
+			slideChangeTransitionEnd: function () {
+				$("#swiper2").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+				$("#swiper2").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr(
+					"tabindex", 0);
+			},
+			slideChange: function () {
+				$(".swiper-pagination-bullet").each(function (index, item) {
+					$(this).attr({
+						"aria-label": index + 1 + '슬라이드'
+					});
+					// $(item).attr("aria-pressed",true);
+				});
+			}
+		}
+	});
+	// 카드 슬라이드
+	var swiper3 = new Swiper('#swiper3', {
+		centeredSlides: true,
+		slidesPerView: 2,
+		spaceBetween: 40,
+		pagination: {
+			el: '#swiper3 .swiper-pagination',
+			clickable: true,
+			type: "fraction",
+		},
+		navigation: {
+			nextEl: '#swiper3 .swiper-button-next',
+			prevEl: '#swiper3 .swiper-button-prev'
+		},
+		on: {
+			init: function () {
+				$("#swiper3").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+				$("#swiper3").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr(
+					"tabindex", 0);
+				$(".swiper-pagination-bullet").each(function (index, item) {
+					$(item).attr("aria-label", index + 1 + "슬라이드로 가기");
+					$(item).removeAttr("aria-current")
+				});
+			},
+			slideChangeTransitionEnd: function () {
+				$("#swiper3").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+				$("#swiper3").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr(
+					"tabindex", 0);
+			},
+			slideChange: function () {
+				$(".swiper-pagination-bullet").each(function (index, item) {
+					$(this).attr({
+						"aria-label": index + 1 + '슬라이드'
+					});
+					// $(item).attr("aria-pressed",true);
+				});
+			}
+		}
+	});
+
+</script>
+</body>
+</html>
+

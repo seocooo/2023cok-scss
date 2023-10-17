@@ -1,0 +1,888 @@
+@@include('head.html',{
+    page_title : "Form"
+})
+<style>
+	.guide-content+.guide-content {
+		margin-top: 50px;
+	}
+
+	.guide-list+.guide-list {
+		margin-top: 20px;
+	}
+
+	.guide-list>ul {
+		display: flex;
+		gap: 5px;
+	}
+
+	.guide-list>ul>li {
+		flex: 1;
+	}
+
+	.guide-list>ul>li>dl {
+		margin-top: 5px;
+		line-height: 1;
+		font-size: 12px;
+	}
+
+</style>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+        <div class="header-start"><h1>Form</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="guide-content">
+			<div class="title-group">
+				<strong class="title">Input</strong>
+			</div>
+
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div class="form-group st_row">
+							<label for="input0" class="form-label">Label 기본타입_row</label>
+							<div class="form-item">
+								<input type="text" title="타이틀" value="" id="input0" class="form-input" placeholder="플레이스홀더 default">
+								<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div>
+							<label for="input1" class="form-label">Label 기본타입</label>
+							<div class="form-item">
+								<input type="text" title="타이틀" value="" id="input1" class="form-input"
+									placeholder="플레이스홀더 default">
+								<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+							</div>
+							<p class="form-chk-text">가이드 텍스트 문구입니다.</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label for="input3" class="form-label">Label st_solid타입</label>
+							<div class="form-item st_solid">
+								<input type="text" title="타이틀" value="" id="input3" class="form-input"
+									placeholder="플레이스홀더 st_solid">
+								<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label for="input2" class="form-label">Label st_udline타입</label>
+							<div class="form-item st_udline">
+								<input type="text" title="타이틀" value="" id="input2" class="form-input"
+									placeholder="플레이스홀더 st_udline">
+								<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div>
+							<label class="form-label">Label 기본타입2 st_inner</label>
+							<div class="form-item st_inner cs_focus">
+								<label for="input1-1" class="form-label">이름</label>
+								<div class="form-inner">
+									<input type="text" title="타이틀" value="" id="input1-1" class="form-input"
+										placeholder="이름 입력">
+									<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+								</div>
+							</div>
+							<p class="form-chk-text">가이드 텍스트 문구입니다.</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label for="input3-1" class="form-label">Label st_solid타입</label>
+							<div class="form-item st_inner st_solid cs_focus">
+								<label for="input3-1" class="form-label">본인인증 연락처</label>
+								<div class="form-inner">
+									<input type="text" title="타이틀" value="010-1234-5678" id="input3-1"
+										class="form-input" placeholder="플레이스홀더 st_solid">
+									<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label for="input2-1" class="form-label">Label st_udline타입</label>
+							<div class="form-item st_inner st_udline cs_focus">
+								<label for="input2-1" class="form-label">이메일</label>
+								<div class="form-inner">
+									<input type="text" title="타이틀" value="nh1234@nonghyup.com" id="input2-1"
+										class="form-input" placeholder="이름 입력">
+									<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<div>
+					<label for="search" class="form-label">검색</label>
+					<div class="form-item">
+						<input type="text" title="타이틀" value="검색박스" id="search" class="form-input "
+							placeholder="플레이스홀더">
+						<button title="입력값 초기화" class="ic-input-reset"></button>
+						<button title="검색" class="ic-input-search"></button>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div>
+							<label class="form-label" for="input7">값+체크완료</label>
+							<div class="form-item cs_val cs_chk-ok">
+								<input type="text" title="타이틀" value="인풋값 cs_chk-ok" id="input7" class="form-input"
+									placeholder="플레이스홀더">
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+							<p class="form-chk-text">이름이 정확합니다.</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label class="form-label" for="input8">값+체크오류</label>
+							<div class="form-item cs_val cs_chk-error">
+								<input type="text" title="타이틀" value="인풋값 cs_chk-error" id="input8" class="form-input"
+									placeholder="플레이스홀더">
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+							<p class="form-chk-text">한글만 입력 가능합니다.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div>
+							<label class="form-label" for="input9">값+readonly</label>
+							<div class="form-item cs_val cs_readonly">
+								<input type="text" title="타이틀" value="인풋값" id="input9" class="form-input"
+									placeholder="플레이스홀더" readonly="">
+							</div>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label class="form-label" for="input10">값+disabled</label>
+							<div class="form-item cs_val cs_disabled">
+								<input type="text" title="타이틀" value="인풋값" id="input10" class="form-input"
+									placeholder="플레이스홀더" disabled="">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div>
+							<label for="amount01" class="form-label">금액</label>
+							<div class="form-item cs_amount">
+								<input type="tel" title="금액" value id="amount01" class="form-input" placeholder="금액을입력하세요" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+								<span class="unit">원</span>
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+							<p class="form-chk-text cs_amount">원</p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<label for="amount02" class="form-label">금액</label>
+							<div class="form-item cs_amount cs_chk-error">
+								<input type="tel" title="금액" value id="amount02" class="form-input" placeholder="금액을입력하세요" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+								<span class="unit">원</span>
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+							<p class="form-chk-text cs_amount">원</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div class="form-group">
+							<label for="textarea" class="form-label">Label textarea</label>
+							<div class="form-textarea-item cs_val">
+								<textarea id="textarea" class="text-textarea"
+									placeholder="Placeholder">텍스트 문장을 작성할 때 cs_val이 나타나고 작성이 완료된 후 그 공간은 텍스트로 채워져야 되는가 비워져야 되는가</textarea>
+								<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+							</div>
+							<div class="form-desc">
+								<p class="form-chk-text">안내문구입니다.</p>
+								<div class="form-textarea-count">
+									<span class="cnt-current">0</span>
+									<span>/</span>
+									<span class="cnt-max">50</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<label for="textarea02" class="form-label">Label textarea</label>
+							<div class="form-textarea-item cs_val cs_chk-error">
+								<textarea id="textarea02" class="text-textarea"
+									placeholder="Placeholder">텍스트 오류</textarea>
+								<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+							</div>
+							<div class="form-desc">
+								<p class="form-chk-text">안내문구입니다.</p>
+								<div class="form-textarea-count">
+									<span class="cnt-current">0</span>
+									<span>/</span>
+									<span class="cnt-max">50</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<label for="textarea03" class="form-label">Label textarea</label>
+							<div class="form-textarea-item cs_val">
+								<textarea id="textarea03" class="text-textarea" placeholder="Placeholder"
+									disabled></textarea>
+								<button title="입력값 초기화" class="ic-input-reset" button=""></button>
+							</div>
+							<div class="form-desc">
+								<p class="form-chk-text">안내문구입니다.</p>
+								<div class="form-textarea-count">
+									<span class="cnt-current">0</span>
+									<span>/</span>
+									<span class="cnt-max">50</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div class="form-group">
+							<strong class="form-label">패스워드 입력전</strong>
+							<div class="form-item">
+								<div role="button" aria-label="비밀번호 입력" class="form-password">
+									<div class="password">
+										<span class="cs_active">비밀번호 1자리</span>
+										<span class="cs_active">비밀번호 2자리</span>
+										<span>비밀번호 3자리</span>
+										<span>비밀번호 4자리</span>
+									</div>
+								</div>
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<strong class="form-label">패스워드 값+포커스</strong>
+							<div class="form-item cs_focus cs_val">
+								<div title="비밀번호 2자리 입력됨" role="button" aria-label="비밀번호 입력" class="form-password">
+									<div class="password">
+										<span class="cs_active">비밀번호 1자리</span>
+										<span class="cs_active">비밀번호 2자리</span>
+										<span>비밀번호 3자리</span>
+										<span>비밀번호 4자리</span>
+									</div>
+								</div>
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div class="form-group">
+							<strong class="form-label">패스워드 값+체크오류</strong>
+							<div class="form-item cs_val cs_chk-error">
+								<div title="비밀번호 4자리 입력됨" role="button" aria-label="비밀번호 입력" class="form-password">
+									<div class="password">
+										<span class="cs_active">비밀번호 1자리</span>
+										<span class="cs_active">비밀번호 2자리</span>
+										<span class="cs_active">비밀번호 3자리</span>
+										<span class="cs_active">비밀번호 4자리</span>
+									</div>
+								</div>
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+							<div class="form-chk-text cs_chk-error">비밀번호가 일치하지 않습니다.</div>
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<strong class="form-label">패스워드 값+체크완료</strong>
+							<div class="form-item cs_val cs_chk-ok">
+								<div title="비밀번호 4자리 입력됨" role="button" aria-label="비밀번호 입력" class="form-password">
+									<div class="password">
+										<span class="cs_active">비밀번호 1자리</span>
+										<span class="cs_active">비밀번호 2자리</span>
+										<span class="cs_active">비밀번호 3자리</span>
+										<span class="cs_active">비밀번호 4자리</span>
+									</div>
+								</div>
+								<button title="입력값 초기화" class="ic-input-reset"></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="guide-content">
+			<div class="title-group">
+				<strong class="title">Select</strong>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div class="form-group">
+							<strong class="form-label">선택</strong>
+							<div class="form-item">
+								<button title="선택" data-modal="modal-select"
+									class="form-select js_modal-open">선택</button>
+							</div>
+						</div>
+						<div role="dialog" aria-hidden="true" aria-labelledby="modal1-label" id="modal-select"
+							class="modal st_bottom-sheet">
+							<div class="modal-dim"></div>
+							<div class="modal-inner">
+								<div class="modal-header">
+									<div class="modal-title">셀렉트모달</div>
+								</div>
+								<div class="modal-content">
+									<div class="modal-select-list">
+										<ul>
+											<!-- [D] :  cs_active 추가 시 아이템이 활성화 됨 -->
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션1</a></li>
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션2</a></li>
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션3</a></li>
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션4</a></li>
+										</ul>
+									</div>
+								</div>
+								<button title="닫기" class="modal-close js_modal-close"><i
+										class="ic-btn-close"></i></button>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="form-group">
+							<strong class="form-label">선택</strong>
+							<div class="form-item cs_val">
+								<button title="선택" data-modal="modal-select2" class="form-select js_modal-open">선택된
+									값</button>
+							</div>
+						</div>
+						<div role="dialog" aria-hidden="true" aria-labelledby="modal1-label" id="modal-select2"
+							class="modal st_bottom-sheet">
+							<div class="modal-dim"></div>
+							<div class="modal-inner">
+								<div class="modal-header">
+									<div class="modal-title">셀렉트모달</div>
+								</div>
+								<div class="modal-content">
+									<div class="modal-select-list">
+										<ul>
+											<!-- [D] :  cs_active 추가 시 아이템이 활성화 됨 -->
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션1</a></li>
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션2</a></li>
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션3</a></li>
+											<li class="modal-select-item"><a href="javascript:;">셀렉트 옵션4</a></li>
+										</ul>
+									</div>
+								</div>
+								<button title="닫기" class="modal-close js_modal-close"><i
+										class="ic-btn-close"></i></button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div class="form-group">
+							<strong class="form-label">선택</strong>
+							<div class="form-item cs_val cs_disabled">
+								<button title="선택" class="form-select" disabled="">선택되어 있는 수정 불가능한 값</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="guide-content">
+			<div class="title-group">
+				<strong class="title">캘린더</strong>
+			</div>
+			<div class="form-group">
+				<strong class="form-label">대출만기일</strong>
+				<div class="form-item cs_val">
+					<button title="선택" class="form-select form-select-date">2023.06.01</button>
+				</div>
+			</div>
+		</div>
+		<div class="guide-content">
+			<div class="title-group">
+				<strong class="title">폼그룹</strong>
+			</div>
+			<div class="guide-list">
+				<div>
+					<label class="form-label">주소</label>
+					<div class="form-group">
+						<div class="form-item">
+							<button title="선택" class="form-search">우편번호 검색</button>
+						</div>
+						<div class="form-item cs_readonly">
+							<input type="text" title="" class="form-input" readonly>
+						</div>
+						<div class="form-item st_solid">
+							<input type="text" title="상세주소" class="form-input" placeholder="상세주소">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div>
+					<strong class="form-label">동/호수</strong>
+					<div class="form-group">
+						<div class="form-item">
+							<input type="tel" title="동" class="form-input" placeholder="입력">
+							<span class="unit">동</span>
+						</div>
+						<div class="form-item">
+							<input type="tel" title="호" class="form-input" placeholder="입력">
+							<span class="unit">호</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div>
+					<strong class="form-label">휴대폰 번호</strong>
+					<div class="form-group st_row">
+						<div class="form-radio">
+							<input type="radio" value="" name="rdo07" id="rdo0701" class="check-input">
+							<label for="rdo0701" class="form-check-label">SKT<br>(알뜰폰 포함)</label>
+						</div>
+						<div class="form-radio">
+							<input type="radio" value="" name="rdo07" id="rdo0702" class="check-input">
+							<label for="rdo0702" class="form-check-label">KT<br>(알뜰폰 포함)</label>
+						</div>
+						<div class="form-radio">
+							<input type="radio" value="" name="rdo07" id="rdo0703" class="check-input">
+							<label for="rdo0703" class="form-check-label">LG U+<br>(알뜰폰 포함)</label>
+						</div>
+					</div>
+					<div class="form-group st_row-46">
+						<div class=" form-item cs_val">
+							<button type="button" title="휴대폰번호 앞자리 선택" data-modal="modal-select3"
+								class="form-select js_modal-open">010</button>
+						</div>
+						<div class="form-item">
+							<input type="tel" title="휴대폰번호 뒷자리" class="form-input" placeholder="휴대전화번호 ‘-’없이 입력">
+							<button class="ic-input-reset"></button>
+						</div>
+						<div role="dialog" aria-hidden="true" aria-labelledby="modal1-label" id="modal-select3"
+							class="modal st_bottom-sheet">
+							<div class="modal-dim"></div>
+							<div class="modal-inner">
+								<div class="modal-header">
+									<div class="modal-title">셀렉트모달</div>
+								</div>
+								<div class="modal-content">
+									<div class="modal-select-list">
+										<ul>
+											<li class="modal-select-item"><a href="javascript:;">010</a></li>
+											<li class="modal-select-item"><a href="javascript:;">016</a></li>
+										</ul>
+									</div>
+								</div>
+								<button title="닫기" class="modal-close js_modal-close"><i
+										class="ic-btn-close"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div>
+					<label for="num01" class="form-label">주민등록번호</label>
+					<form class="form-group st_row" action="">
+						<div class="form-item cs_focus">
+							<input type="text" title="주민번호 앞자리 6자리" value="901111" id="num01" class="form-input"
+								pattern="\d{6}" autocomplete="off" required="" placeholder="생년월일 6자리" maxlength="6">
+						</div>
+						<span class="symbol">-</span>
+						<div class="form-item">
+							<input type="password" title="주민번호 뒷자리 7자리" class="form-input" pattern="\d{7}"
+								autocomplete="current-password" required="" placeholder="뒤 7자리 입력" maxlength="7">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="form-group">
+					<label for="num02" class="form-label">전화번호</label>
+					<div class="form-group st_row">
+						<div class="form-item">
+							<input type="tel" title="전화번호 앞자리" id="num02" class="form-input">
+						</div>
+						<span class="symbol">-</span>
+						<div class="form-item">
+							<input type="tel" title="전화번호 가운데자리" class="form-input">
+						</div>
+						<span class="symbol">-</span>
+						<div class="form-item">
+							<input type="tel" title="전화번호 뒷자리" class="form-input">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="form-group">
+					<label for="num03" class="form-label">이메일주소</label>
+					<div class="form-group st_row">
+						<div class="form-item">
+							<input type="text" title="이메일주소 앞자리" id="num03" class="form-input">
+						</div>
+						<span class="symbol">-</span>
+						<div class="form-item">
+							<button title="이메일주소 뒷자리 선택" class="form-select"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="guide-content">
+			<div class="title-group">
+				<strong class="title">checkbox</strong>
+			</div>
+			<div class="guide-list">
+				<div class="form-check">
+					<input type="checkbox" id="chk21" class="check-input">
+					<label for="chk21" class="form-check-label">
+						Default checkbox
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="chk22" class="check-input" checked="">
+					<label for="chk22" class="form-check-label">
+						Default checkbox
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="chk23" class="check-input" disabled="">
+					<label for="chk23" class="form-check-label">
+						Default checkbox
+					</label>
+				</div>
+				<div class="form-check">
+					<input type="checkbox" id="chk24" class="check-input" disabled="" checked="">
+					<label for="chk24" class="form-check-label">
+						Default checkbox
+					</label>
+				</div>
+				<div class="form-check type2">
+					<input type="checkbox" id="chk25" class="check-input">
+					<label for="chk25" class="form-check-label">
+						Default type1 checkbox
+					</label>
+				</div>
+				<div class="form-check type2">
+					<input type="checkbox" id="chk26" class="check-input" checked="">
+					<label for="chk26" class="form-check-label">
+						Default type1 checkbox
+					</label>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="title-group">
+					<strong class="title">checkbox - inline</strong>
+				</div>
+				<div class="form-check st_inline">
+					<input type="checkbox" value="" id="chk0201" class="check-input">
+					<label for="chk0201" class="form-check-label">
+						Default checkbox
+					</label>
+				</div>
+				<div class="form-check st_inline">
+					<input type="checkbox" value="" id="chk0202" class="check-input" checked="">
+					<label for="chk0202" class="form-check-label">
+						Checked checkbox
+					</label>
+				</div>
+				<div class="form-check st_inline">
+					<input type="checkbox" value="" id="chk0203" class="check-input" disabled="">
+					<label for="chk0203" class="form-check-label">
+						Checked disabled checkbox
+					</label>
+				</div>
+				<div class="form-check st_inline">
+					<input type="checkbox" value="" id="chk0204" class="check-input" checked="" disabled="">
+					<label for="chk0204" class="form-check-label">
+						Checked disabled checkbox
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="guide-content">
+			<div class="guide-list">
+				<div class="title-group">
+					<strong class="title">radio</strong>
+				</div>
+				<div class="form-radio">
+					<input type="radio" name="rdo00" id="rdo099" class="check-input">
+					<label for="rdo099" class="form-check-label">
+						Default radio
+					</label>
+				</div>
+				<div class="form-radio">
+					<input type="radio" name="rdo00" id="rdo0100" class="check-input" checked="">
+					<label for="rdo0100" class="form-check-label">
+						Checked radio
+					</label>
+				</div>
+				<div class="form-radio">
+					<input type="radio" name="rdo00" id="rdo01011" class="check-input" disabled="">
+					<label for="rdo01011" class="form-check-label">
+						Disabled radio
+					</label>
+				</div>
+				<div class="form-radio">
+					<input type="radio" name="rdo00" id="rdo01022" class="check-input" disabled="" checked="">
+					<label for="rdo01022" class="form-check-label">
+						Checked disabled radio
+					</label>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="title-group">
+					<strong class="title">radio - 세로정렬</strong>
+				</div>
+				<div class="form-group">
+					<div class="form-radio">
+						<input type="radio" name="rdo016" id="rdo05011" class="check-input">
+						<label for="rdo05011" class="form-check-label">
+							Default form-group radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo016" id="rdo05012" class="check-input">
+						<label for="rdo05012" class="form-check-label">
+							Default form-group checked radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo016" id="rdo05013" class="check-input">
+						<label for="rdo05013" class="form-check-label">
+							Default form-group checked radio
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="title-group">
+					<strong class="title">radio - 세로정렬</strong>
+				</div>
+				<div class="form-group type2">
+					<div class="form-radio">
+						<input type="radio" name="rdo0116" id="rdo050111" class="check-input">
+						<label for="rdo050111" class="form-check-label">
+							Default form-group type2 radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo0116" id="rdo050112" class="check-input">
+						<label for="rdo050112" class="form-check-label">
+							Default form-group type2 checked radio Default form-group type2 checked radio
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="title-group">
+					<strong class="title">radio - 1/n</strong>
+				</div>
+				<div class="form-group st_row">
+					<div class="form-radio">
+						<input type="radio" name="rdo02" id="rdo0201" class="check-input">
+						<label for="rdo0201" class="form-check-label">
+							Default radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo02" id="rdo0202" class="check-input" checked="">
+						<label for="rdo0202" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="form-group st_row">
+					<div class="form-radio">
+						<input type="radio" name="rdo03" id="rdo0301" class="check-input">
+						<label for="rdo0301" class="form-check-label">
+							Default radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo03" id="rdo0302" class="check-input">
+						<label for="rdo0302" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo03" id="rdo0303" class="check-input" checked="">
+						<label for="rdo0303" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="form-group st_row">
+					<div class="form-radio">
+						<input type="radio" name="rdo04" id="rdo0401" class="check-input">
+						<label for="rdo0401" class="form-check-label">
+							Default radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo04" id="rdo0402" class="check-input">
+						<label for="rdo0402" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo04" id="rdo0403" class="check-input" checked="">
+						<label for="rdo0403" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo04" id="rdo0404" class="check-input">
+						<label for="rdo0404" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="guide-list">
+				<div class="title-group">
+					<strong class="title">radio - 1/2</strong>
+				</div>
+				<div class="form-group st_row-5">
+					<div class="form-radio">
+						<input type="radio" name="rdo06" id="rdo0601" class="check-input">
+						<label title="" for="rdo0601" class="form-check-label">
+							Default radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo06" id="rdo0602" class="check-input" checked="">
+						<label for="rdo0602" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+					<div class="form-radio">
+						<input type="radio" name="rdo06" id="rdo0603" class="check-input" checked="">
+						<label for="rdo0603" class="form-check-label">
+							Default checked radio
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="guide-content">
+			<div class="title-group">
+				<strong class="title">Input 기간</strong>
+			</div>
+			<div class="guide-list">
+				<div class="form-range">
+					<input type="range" title="계약기간" value="0" class="range">
+					<datalist id="markers">
+						<option value="6">6개월</option>
+						<option value="12">12개월</option>
+						<option value="24">24개월</option>
+					</datalist>
+					<div class="range-value">
+						<div class="range-bubble">12개월</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+
+<script>
+	$('input[type=range]').on('input', function () {
+		var val = $(this).val();
+		$(this).css('background', 'linear-gradient(to right, var(--primary) 0%, var(--primary) ' + val +
+			'%, #d5d4d3 ' +
+			val + '%, #d5d4d3 100%)');
+	});
+
+	// input 포커스 이벤트
+	function addFocusAndValueClasses(item) {
+		const formItem = item.closest('.form-item');
+		if (!formItem.classList.contains('cs_readonly')) {
+			item.closest('.form-item').classList.add('cs_focus', 'cs_val');
+		}
+	}
+
+	function removeFocusAndValueClasses(item) {
+		item.closest('.form-item').classList.remove('cs_focus', 'cs_val');
+	}
+
+	const formInp = document.querySelectorAll('.form-item .form-input');
+	formInp.forEach(function (item) {
+		item.addEventListener('focus', function () {
+			addFocusAndValueClasses(item);
+		});
+		item.addEventListener('blur', function (event) {
+			setTimeout(function () {
+				removeFocusAndValueClasses(item);
+			}, 100)
+		});
+	});
+
+	const clearBtns = document.querySelectorAll('button.ic-input-reset');
+	clearBtns.forEach(function (clearBtn) {
+		clearBtn.addEventListener('click', function () {
+			const inputElement = clearBtn.parentElement.querySelector('.form-input');
+			if (inputElement) {
+				inputElement.value = '';
+			}
+		});
+	});
+
+</script>
+@@include('foot.html')

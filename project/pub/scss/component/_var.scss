@@ -1,0 +1,196 @@
+@charset 'UTF-8';
+/*! Version: 0.1 Copyright ⓒSeptem UI Team (2023) */
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url("../../content/fonts/Pretendard/static/woff2/Pretendard-Bold.woff2")
+      format("woff2"),
+    url("../../content/fonts/Pretendard/static/woff/Pretendard-Bold.woff")
+      format("woff");
+}
+
+/*@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"),
+    url("../../content/fonts/Pretendard/static/woff2/Pretendard-SemiBold.woff2")
+      format("woff2"),
+    url("../../content/fonts/Pretendard/static/woff/Pretendard-SemiBold.woff")
+      format("woff");
+}*/
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url("../../content/fonts/Pretendard/static/woff2/Pretendard-Medium.woff2")
+      format("woff2"),
+    url("../../content/fonts/Pretendard/static/woff/Pretendard-Medium.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url("../../content/fonts/Pretendard/static/woff2/Pretendard-Regular.woff2")
+      format("woff2"),
+    url("../../content/fonts/Pretendard/static/woff/Pretendard-Regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Pretendard Light"),
+    url("../../content/fonts/Pretendard/static/woff2/Pretendard-Light.woff2")
+      format("woff2"),
+    url("../../content/fonts/Pretendard/static/woff/Pretendard-Light.woff")
+      format("woff");
+}
+
+:root {
+  --primary: var(--sapphire-01);
+  --second: var(--green-01);
+  --third: var(--blue-01);
+  --point: var(--yellow-01);
+  --main: var(--sapphire-01);
+  --bgc-01: var(--gray-00);
+  --bdc-01: var(--sub-gray-04);
+  --bdc-02: var(--sub-gray-05);
+  --bdc-03: var(--sub-gray-06);
+  /* line-color */
+  --lc-01: var(--sub-gray-01);
+  /* font-color */
+  --fc-01: var(--black);
+  --fc-02: var(--gray-07);
+  --fc-03: var(--gray-05);
+  --fc-04: var(--gray-04);
+  --fc-05: var(--sub-gray-02);
+  --fc-06: var(--sub-gray-03);
+  --fc-07: var(--sapphire-01);
+  --fc-08: var(--red-01);
+  --fc-09: var(--sapphire-02);
+  --sub-01: var(--blue-01);
+  --sub-02: var(--gray-02);
+  --error: var(--red-01);
+
+  --gray-00: #f5f6f8;
+  --gray-01: #e4e7eb;
+  --gray-02: #cbd2d9;
+  --gray-03: #9aa5b1;
+  --gray-04: #7b8794;
+  --gray-05: #616e7c;
+  --gray-06: #52606d;
+  --gray-07: #3e4c59;
+  --gray-08: #29353f;
+  --gray-09: #1f2933;
+  --sub-gray-01: #e5e5e5;
+  --sub-gray-02: #8c919b;
+  --sub-gray-03: #8b8e92;
+  --sub-gray-04: #f1f1f5;
+  --sub-gray-05: #e5e5ec;
+  --sub-gray-06: #e1e1e1;
+
+  --black: #111;
+  --white: #fff;
+  --sapphire-01: #06a2ba;
+  --sapphire-02: #038ca1;
+  --green-01: #09aa6a;
+  --green-02: #29b475;
+  --green-03: #50b270;
+  --blue-01: #4994eb;
+  --yellow-01: #fff152;
+  --red-01: #ea4956;
+  /* font */
+  --fs-xsmall: 12px;
+  --fs-small: 13px;
+  --fs-normal: 14px;
+  --fs-large: 16px;
+  --fs-xlarge: 18px;
+  --fs-h4: 20px;
+  --fs-h3: 24px;
+  --fs-h2: 32px;
+  --fs-hl: 36px;
+  --fs-h1: 40px;
+  --fw-b: 700;
+  --fw-m: 500;
+  --fw-r: 400;
+  --fw-l: 300;
+  --ls-n: -1px;
+  --lh-base: 1.25;
+  --ff-base: "Pretendard";
+  --link-decoration: underline;
+  /* shadow */
+  --shadow-01: 0px 0px 4px 0px rgba(0, 0, 0, 0.05); /* white bg */
+  --shadow-02: 0px 0px 8px 0px rgba(0, 0, 0, 0.1); /* white bg */
+  --shadow-03: 0px 0px 15px 0px rgba(0, 0, 0, 0.12); /* white bg */
+  --shadow-04: 0px 0px 5px 0px rgba(0, 0, 0, 0.08); /* color bg */
+  --shadow-05: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* color bg */
+  --shadow-06: 0px 0px 20px 0px rgba(0, 0, 0, 0.15); /* color bg */
+  /* radius */
+  --rd-01: 4px;
+  --rd-02: 8px;
+  --rd-03: 16px;
+  --rd-04: 20px;
+  --rd-05: 50%;
+  /* border width */
+  --bw-01: 0.5px;
+  --bw-02: 1px;
+  --bw-03: 2px;
+  /* icon size */
+  --icon-w: 24px;
+  --icon-h: 24px;
+  /* z-index */
+  --pop-z-index: 5000;
+  --bdc-error: var(--red-01);
+
+  /* --bdc-04:#d1d1d1; */
+  /* --bdc-05:#ccc; */
+  /* --bdc-06:#999; */
+  /* --bdc-black:var(--black-05); */
+  /* --bdc-point:var(--green-02); */
+}
+
+[data-theme="light"] {
+  --bg-color: var(--white);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--black);
+}
+
+.ta-l {
+  text-align: left;
+}
+.ta-r {
+  text-align: right;
+}
+.ta-c {
+  text-align: center;
+}
+.dp-b {
+  display: block;
+}
+.dp-f {
+  display: flex;
+}
+
+// mt-0 ~ mt-100
+@for $i from 0 to 20 {
+  .mt-#{5 * $i} {
+    margin-top: ($i * 5px);
+  }
+}
+// mb-0 ~ mb-100
+@for $i from 0 to 20 {
+  .mb-#{5 * $i} {
+    margin-bottom: ($i * 5px);
+  }
+}

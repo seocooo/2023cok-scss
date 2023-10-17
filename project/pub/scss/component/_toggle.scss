@@ -1,0 +1,54 @@
+.toggle-collapse,
+.fold-wrap {
+  display: none;
+}
+
+.toggle-collapse.cs_show,
+.fold-wrap.cs_show {
+  display: block;
+}
+
+.toggle-btn {
+  display: inline-block;
+
+  .toggle-switch {
+    position: relative;
+    width: 40px;
+    height: 24px;
+    padding: 2px;
+    border-radius: 40px;
+    background-color: var(--gray-03);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--bdc-02);
+      border-radius: 50%;
+      background-color: var(--bg-color);
+      box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.06),
+        0px 2px 4px rgba(0, 0, 0, 0.15);
+      content: "";
+      transform: translate(0, -50%);
+    }
+  }
+
+  input[type="checkbox"]:checked + .toggle-switch {
+    background-color: var(--primary);
+
+    &:before {
+      transform: translate(16px, -50%);
+    }
+  }
+
+  .toggle-switch {
+    transition: all 0.2s ease-in;
+
+    &::before {
+      transition: all 0.2s ease-in;
+    }
+  }
+}
+

@@ -1,0 +1,223 @@
+@@include('head.html',{
+    page_title : "Table"
+})
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start"><h1>Table</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="title-group">
+			<strong class="title">기본형</strong>
+		</div>
+		<div class="table-wrap">
+			<table>
+				<caption>테이블 이름</caption>
+				<colgroup>
+					<col width="30%">
+					<col width="">
+					<col width="">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Title 1</th>
+						<th scope="col">Title 2</th>
+						<th scope="col">Title 3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Text</td>
+						<td>Text</td>
+						<td>Text</td>
+					</tr>
+					<tr>
+						<td>Text</td>
+						<td>Text</td>
+						<td>Text</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="table-wrap">
+			<table>
+				<caption>테이블 이름</caption>
+				<colgroup>
+					<col width="30%">
+					<col width="">
+					<col width="">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Title 1</th>
+						<th scope="col">Title 2</th>
+						<th scope="col">Title 3</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">TitleA</th>
+						<td>Text</td>
+						<td>Text</td>
+					</tr>
+					<tr>
+						<th scope="row">TitleB</th>
+						<td>Text</td>
+						<td>Text</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="table-wrap">
+			<table>
+				<caption>테이블 이름</caption>
+				<colgroup>
+					<col width="15%">
+					<col width="25%">
+					<col width="55%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">Title1</th>
+						<th class="ac" scope="colgroup" colspan="2">Title2</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="rowgroup" rowspan="2">TitleA</th>
+						<th scope="row">Sub</th>
+						<td>Text</td>
+					</tr>
+					<tr>
+						<th scope="row">Sub</th>
+						<td>Text</td>
+					</tr>
+					<tr>
+						<th scope="rowgroup" rowspan="2">TitleB</th>
+						<th scope="row">Sub</th>
+						<td>Text</td>
+					</tr>
+					<tr>
+						<th scope="row">Sub</th>
+						<td>Text</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="table-wrap">
+			<table>
+				<caption>테이블 이름</caption>
+				<colgroup>
+					<col width="">
+					<col width="">
+					<col width="">
+					<col width="">
+				</colgroup>
+				<thead class="colgroup">
+					<tr>
+						<th scope="colgroup" colspan="2">자동화기기</th>
+						<th scope="col" rowspan="2">전자금융<br>(이체)</th>
+						<th scope="col" rowspan="2">창구거래</th>
+					</tr>
+					<tr>
+						<th scope="col">인출</th>
+						<th scope="col">이체</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>30만원</td>
+						<td>30만원</td>
+						<td colspan="2">100만원</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">thead 고정</strong>
+		</div>
+		<div class="table-wrap st_fixed-header">
+			<div class="table-content">
+				<table>
+					<caption>테이블 이름</caption>
+					<colgroup>
+						<col width="">
+						<col width="">
+						<col width="">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">Title 1</th>
+							<th scope="col">Title 2</th>
+							<th scope="col">Title 3</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row">Text1</td>
+							<td>Text1</td>
+							<td>Text1</td>
+						</tr>
+						<tr>
+							<td scope="row">Text2</td>
+							<td>Text2</td>
+							<td>Text2</td>
+						</tr>
+						<tr>
+							<td scope="row">Text3</td>
+							<td>Text3</td>
+							<td>Text3</td>
+						</tr>
+						<tr>
+							<td scope="row">Text4</td>
+							<td>Text4</td>
+							<td>Text4</td>
+						</tr>
+						<tr>
+							<td scope="row">Text5</td>
+							<td>Text5</td>
+							<td>Text5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">기본형2</strong>
+		</div>
+		<div class="table-wrap st_borderless">
+			<table>
+				<caption>테이블 이름</caption>
+				<colgroup>
+					<col width="27%">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">타이틀</th>
+						<td>내용</td>
+					</tr>
+					<tr>
+						<th scope="row">타이틀</th>
+						<td>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</td>
+					</tr>
+					<tr>
+						<th scope="row">타이틀</th>
+						<td>내용</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+@@include('foot.html')

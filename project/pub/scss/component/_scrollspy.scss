@@ -1,0 +1,56 @@
+.scrollspy-nav {
+  overflow-x: scroll;
+  background-color: var(--bg-color);
+
+  &.st-sticky {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+
+    + .scrollspy-cont {
+      margin-top: 50px;
+    }
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin-left: 7px;
+    }
+  }
+
+  .nav-item {
+    display: flex;
+    height: 36px;
+    padding: 6px 10px;
+    border: 1px solid var(--bdc-01);
+    border-radius: 15px;
+    color: var(--fc-05);
+    align-items: center;
+
+    &.cs_active {
+      border-color: var(--primary);
+      background-color: var(--primary);
+      font-size: 16px;
+      color: var(--white);
+    }
+  }
+}
+
+/*width: calc(100% - 100px);은 가이드에 의해 임시로 적어 놓은 수치입니다.*/
+
+.scrollspy-cont {
+  margin-top: 15px;
+
+  .cont-header {
+    padding: 10px;
+    background-color: var(--gray-02);
+  }
+
+  .cont-body li {
+    padding: 15px;
+    border-bottom: 1px solid var(--gray-03);
+  }
+}
+

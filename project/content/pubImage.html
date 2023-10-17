@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>이미지 가이드 - 2023 NH콕뱅크 차세대</title>
+	<link rel="stylesheet" href="./com/css/septem_pub_base.css">
+	<link rel="stylesheet" href="./com/css/septem_pub_guide.css">
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/var.css">
+	<link rel="stylesheet" href="../css/comm.css">
+	<link rel="stylesheet" href="../css/form.css">
+	<link rel="stylesheet" href="../css/comp.css">
+	<link rel="stylesheet" href="../css/popup.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<script src="./com/js/lib/sniffer.min.js"></script>
+
+	<script src="./com/js/lib/jquery-3.6.4.min.js"></script>
+	<script src="./com/js/lib/anime-3.2.1.min.js"></script>
+	<script src="./com/js/lib/swiper.min.js"></script>
+	<script src="./com/js/common.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<!-- highlights -->
+	<link rel="stylesheet" href="./com/css/lib/github-dark-dimmed.min.css">
+	<link rel="stylesheet" href="./com/css/lib/highlightjs-copy.min.css">
+	<script src="./com/js/lib/highlight.min.js"></script>
+	<script src="./com/js/lib/highlightjs-copy.min.js"></script>
+	<script>
+		hljs.addPlugin(new CopyButtonPlugin());
+		hljs.highlightAll();
+	</script>
+	<style>
+		.ng_header-inner {height:50px}
+		.ng_aside a{ border:2px solid #fff; }
+		.ng_code-preview{max-width:589px; border:1px solid #02aa5f;padding:2rem;border-radius:10px;}
+		.guide-icon + .guide-icon{margin-top: 10px;}
+		.guide-icon .guide-icon-title{padding: 10px; text-align: center; border: 1px solid var(--bdc-05); border-radius: 15px 15px 0 0; background-color: var(--bgc-green-01);}
+		.guide-icon .guide-icon-list{display: flex; flex-wrap: wrap; width:100%; border-left: 1px solid var(--bdc-05);}
+		.guide-icon .guide-icon-item{position: relative; width:calc(20% + 1px); margin-left:-1px; margin-top:-1px; text-align: center; border: 1px solid var(--bdc-05);}
+		/* .guide-icon .guide-icon-item{position: relative; width:20%; text-align: center; border: 1px solid var(--bdc-05); border-left: 0; border-top: 1px solid transparent;} */
+		.guide-icon .guide-icon-item:hover{position: relative; border: 1px solid var(--green-01); z-index: 1;}
+		.guide-icon .guide-icon-item:hover .icon-title{color: var(--green-01);}
+		.guide-icon .guide-icon-item .icon-img{padding: 10px;}
+		.guide-icon .guide-icon-item .icon-title{padding: 10px; color: var(--fc-09);}
+
+		.ng_nav .ng_nav-list{position: relative;}
+		.ng_nav .ng_nav-list + .ng_nav-list{margin-left:40px;}
+		.ng_nav .ng_nav-list.ng-active::before{position: absolute;right: -4px;bottom: -18px;left: -4px;height: 3px;background-color: #fff; content: '';}
+		.ng_nav .ng_nav-list a{padding: 10px 0;}
+		.ng_main{grid-template-columns: auto;}
+	</style>
+</head>
+<body>
+	<!-- wrap -->
+	<div class="ng_wrap">
+		<!-- Header -->
+		<header class="ng_header">
+			<div class="ng_header-inner">
+				<!-- <div class="ng_muenu-toggle">
+					<input type="checkbox" />
+					<span></span>
+					<span></span>
+					<span></span>
+				</div> -->
+				<h1 class="ng_title">NH콕뱅크 UI/UX 가이드 &gt; <span>Icon</span></h1>
+				<div class="ng_l-menu">
+					<!-- <a href="#!" title="뒤로가기" role="button" class="ng_btn-back">back</a> -->
+					<button type="button" title="뒤로가기" class="ng_btn ng_btn-back"></button>
+				</div>
+				<nav class="ng_r-menu">
+					<ul class="ng_nav">
+						<li class="ng_nav-list"><a href="pubList.html">퍼블리스트</a></li>
+						<li class="ng_nav-list"><a href="pubGuide.html">UI가이드</a></li>
+						<li class="ng_nav-list ng-active"><a href="pubImage.html">아이콘 가이드</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- //Header -->
+
+	</div>
+	<!-- Container -->
+	<div class="ng_main">
+		<div class="ng_container">
+			<section class="ng_section">
+				<!-- <div class="ng_section-header">
+					<h2 class="ng_h3-title"># 레이아웃</h2>
+				</div> -->
+				<div class="ng_section-contents">
+					<h1 class="ng_h1-title">아이콘 리스트</h1>
+
+					<article id="cont_icon" class="ng ng_content">
+						<!-- <h2 class="ng_h2-title">Common</h2> -->
+						<h2 class="ng_h2-title">svg 사용가이드</h2>
+						<p class="ng_text">
+							svg 사용 가이드입니다.<br>
+							확장팩 다운로드 : Image To Base64, vscode-base64<br>
+							1. svg 코드 전체선택 (복사X)<br>
+							2. ctrl + shift + p → base64 encode 클릭 (base64로 변환됨)<br>
+							3. 변환된 코드를 복사한 후 data:image/svg+xml;base64, 뒤에 불여넣기<br>
+							(background:url(data:image/svg+xml;base64,복사한코드;))<br>
+						</p>
+						<h2 class="ng_h2-title">아이콘</h2>
+							<p class="ng_text">
+								- 아이콘의 기본 크기는 24*24 입니다.<br>
+								- 예외 스타일은 다중 클래스를 활용하고<br>
+									상위요소의 크기를 상속 받아서 사용할 수 있습니다.<br>
+								- 클래스의 이름 충돌을 방지하고 가독성을 높이기 위해 접두어(ic-)를 붙입니다. <br>
+								- ic-ico-error
+
+							</p>
+						<div class="ng_code-box">
+							<!-- <ul>
+								<li><span>ic-ico-error</span><i class="ic-ico-error"></i><i class="ic-ico-error"></i></li>
+								<li><span>ic-ico-help</span><i class="ic-ico-help"></i><i class="ic-ico-help"></i></li>
+								<li><span>arrow</span><i class="arrow"></i><i class="arrow"></i></li>
+								<li><span>ic-arr-down</span><i class="ic-arr-down"></i><i class="ic-arr-down"></i></li>
+								<li><span>ic-arr-right</span><i class="ic-arr-right"></i><i class="ic-arr-right"></i></li>
+								<li><span>ic-arr-up</span><i class="ic-arr-up"></i><i class="ic-arr-up"></i></li>
+								<li><span>ic-btn-back</span><i class="ic-btn-back"></i><i class="ic-btn-back"></i></li>
+								<li><span>ic-btn-cal</span><i class="ic-btn-cal"></i><i class="ic-btn-cal"></i></li>
+								<li><span>ic-btn-close</span><i class="ic-btn-close"></i><i class="ic-btn-close"></i></li>
+								<li><span>ic-btn-enu</span><i class="ic-btn-enu"></i><i class="ic-btn-enu"></i></li>
+								<li><span>ic-btn-home</span><i class="ic-btn-home"></i><i class="ic-btn-home"></i></li>
+								<li><span>ic-btn-info</span><i class="ic-btn-info"></i><i class="ic-btn-info"></i></li>
+								<li><span>ic-btn-menu</span><i class="ic-btn-menu"></i><i class="ic-btn-menu"></i></li>
+								<li><span>ic-btn-plus</span><i class="ic-btn-plus"></i><i class="ic-btn-plus"></i></li>
+								<li><span>ic-input-chk</span><i class="ic-input-chk"></i><i class="ic-input-chk"></i></li>
+								<li><span>ic-input-chk-chkd</span><i class="ic-input-chk-chkd"></i><i class="ic-input-chk-chkd"></i></li>
+								<li><span>ic-input-chk-dis</span><i class="ic-input-chk-dis"></i><i class="ic-input-chk-dis"></i></li>
+								<li><span>ic-input-chk-on</span><i class="ic-input-chk-on"></i><i class="ic-input-chk-on"></i></li>
+								<li><span>ic-input-chk-ph</span><i class="ic-input-chk-ph"></i><i class="ic-input-chk-ph"></i></li>
+								<li><span>ic-input-chk-s</span><i class="ic-input-chk-s"></i><i class="ic-input-chk-s"></i></li>
+								<li><span>ic-input-error</span><i class="ic-input-error"></i><i class="ic-input-error"></i></li>
+								<li><span>ic-input-ok</span><i class="ic-input-ok"></i><i class="ic-input-ok"></i></li>
+								<li><span>ic-input-rdo-chkd</span><i class="ic-input-rdo-chkd"></i><i class="ic-input-rdo-chkd"></i></li>
+								<li><span>ic-input-rdo-dis</span><i class="ic-input-rdo-dis"></i><i class="ic-input-rdo-dis"></i></li>
+								<li><span>ic-input-rdo-dischkd</span><i class="ic-input-rdo-dischkd"></i><i class="ic-input-rdo-dischkd"></i></li>
+								<li><span>ic-input-rdo-ph</span><i class="ic-input-rdo-dischkd"></i><i class="ic-input-rdo-dischkd"></i></li>
+								<li><span>ic-input-reset</span><i class="ic-input-rdo-dischkd"></i><i class="ic-input-rdo-dischkd"></i></li>
+							</ul> -->
+							<div class="guide-icon">
+								<div class="guide-icon-title">기본 </div>
+								<ul class="guide-icon-list">
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-ico-error"></i>
+										</div>
+										<div class="icon-title">ic-ico-error</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-ico-help"></i>
+										</div>
+										<div class="icon-title">ic-ico-help</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="guide-icon">
+								<div class="guide-icon-title">arrow </div>
+								<ul class="guide-icon-list">
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-arr-down"></i>
+										</div>
+										<div class="icon-title">ic-arr-down</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-arr-right"></i>
+										</div>
+										<div class="icon-title">ic-arr-right</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-arr-up"></i>
+										</div>
+										<div class="icon-title">ic-arr-up</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="guide-icon">
+								<div class="guide-icon-title">arrow 버튼</div>
+								<ul class="guide-icon-list">
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-back"></i>
+										</div>
+										<div class="icon-title">ic-btn-back</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-cal"></i>
+										</div>
+										<div class="icon-title">ic-btn-cal</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-close"></i>
+										</div>
+										<div class="icon-title">ic-btn-close</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-enu"></i>
+										</div>
+										<div class="icon-title">ic-btn-enu</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-home"></i>
+										</div>
+										<div class="icon-title">ic-btn-home</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-info"></i>
+										</div>
+										<div class="icon-title">ic-btn-info</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-menu"></i>
+										</div>
+										<div class="icon-title">ic-btn-menu</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-btn-plus"></i>
+										</div>
+										<div class="icon-title">ic-btn-plus</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="guide-icon">
+								<div class="guide-icon-title">input </div>
+								<ul class="guide-icon-list">
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-chk"></i>
+										</div>
+										<div class="icon-title">ic-input-chk</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-chk-chkd"></i>
+										</div>
+										<div class="icon-title">ic-input-chk-chkd</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-chk-dis"></i>
+										</div>
+										<div class="icon-title">ic-input-chk-dis</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-chk-on"></i>
+										</div>
+										<div class="icon-title">ic-input-chk-on</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-chk-ph"></i>
+										</div>
+										<div class="icon-title">ic-input-chk-ph</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-chk-s"></i>
+										</div>
+										<div class="icon-title">ic-input-chk-s</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-error"></i>
+										</div>
+										<div class="icon-title">ic-input-error</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-ok"></i>
+										</div>
+										<div class="icon-title">ic-input-ok</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-rdo-chkd"></i>
+										</div>
+										<div class="icon-title">ic-input-rdo-chkd</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-rdo-dis"></i>
+										</div>
+										<div class="icon-title">ic-input-rdo-dis</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-rdo-dischkd"></i>
+										</div>
+										<div class="icon-title">ic-input-rdo-dischkd</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-rdo-ph"></i>
+										</div>
+										<div class="icon-title">ic-input-rdo-ph</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-input-reset"></i>
+										</div>
+										<div class="icon-title">ic-input-reset</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+								</ul>
+							</div>
+							<div class="guide-icon">
+								<div class="guide-icon-title">컬러값을 변경할 수 있는 아이콘  style="background-color: var(--red-01);"</div>
+								<ul class="guide-icon-list">
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-ico-bg-error" style="background-color: var(--red-01);"></i>
+										</div>
+										<div class="icon-title">ic-ico-bg-error</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-ico-bg-help" style="background-color: var(--red-01);"></i>
+										</div>
+										<div class="icon-title">ic-ico-bg-help</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-ico-bg-info" style="background-color: var(--red-01);"></i>
+										</div>
+										<div class="icon-title">ic-ico-bg-info</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class="ic-ico-bg-plus" style="background-color: var(--red-01);"></i>
+										</div>
+										<div class="icon-title">ic-ico-bg-plus</div>
+									</li>
+									<li class="guide-icon-item">
+										<div class="icon-img">
+											<i class=""></i>
+										</div>
+										<div class="icon-title"></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="ng_code-box">
+							<h2 class="ng_h2-title">예시</h2>
+					<div class="ng_code-preview">
+	//버튼에 적용된 아이콘
+	<div>
+		<button type="button" class="btn st_primary">primary<i class="ic-ico-help"></i></button>
+		<button type="button" class="btn st_line-primary"><i class="ic-ico-help"></i></button>
+		<a href="javascript:;" title="링크페이지로 이동" class="link st_default">link-default<i class="ic-ico-help"></i></a>
+	</div>
+	<div class="mb-20">
+
+		<button type="button" title="닫기" class="ic-input-reset"></button>
+		<button type="button" title="메인으로가기"><i class="ic-btn-home"></i></button>
+
+	</div>
+	//텍스트 콘텐츠에 적용된 아이콘
+	<div class="mb-10">
+
+		<i class="ic-ico-error"></i><span class="h1">Heading</span>
+
+		<div class="tooltip">
+			<strong>내 검진 결과 비교 툴팁</strong>
+			<div class="tooltip-container">
+				<button type="button" title="툴팁버튼" class="ic-ico-help"></button>
+			</div>
+		</div>
+
+		<div class="info-list">
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<p class="accordion-title">알아두세요</p>
+					<button type="button" aria-expanded="true" class="ic-arr-up js_accordion-btn"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	// 헤더적용에 적용된 아이콘
+	<div>
+		<header class="header">
+			<div class="header-start">
+				<button title="뒤로가기"><i class="ic-btn-back"></i></button>
+			</div>
+			<h1>대출신청</h1>
+			<div class="header-end">
+				<button title="메인으로"><i class="ic-btn-home"></i></button>
+				<button title="전체메뉴"><i class="ic-btn-menu"></i></button>
+			</div>
+		</header>
+	</div>
+
+						</div>
+
+							</div>
+					</article>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset 'utf-8';
+/* [SEPTEM] UI Dev Team :: 셉템 퍼블리싱가이트 pub_base css */
+
+body{margin:0;}
+button,dd,dl,dt,div,span,object,iframe,h1,h2,h3,h4,h5,h6,input,legend,p,select,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,textarea,table,caption,tbody,tfoot,thead,tr,th,td,main,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;box-sizing:border-box;}
+body,button,h1,h2,h3,h4,h5,input,select,table,textarea{font-family:'basefont';font-size:15px;}
+table{border-collapse:collapse;}
+img,fieldset,iframe{border:0;}
+img{max-width:100%;height:auto;}
+ol,ul{list-style:none;}
+address,em{font-style:normal;}
+a{color:inherit;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,.1);}
+button,input,textarea{border-radius:0;}
+button{background-color:transparent;cursor:pointer;}
+select{border-radius:0;}
+
+table{min-width:100%;word-break:break-all;table-layout:fixed;border-spacing:0;border-collapse:collapse;}
+@font-face{
+	font-family:'basefont';
+	font-weight:400;
+	src:local('NanumSquareRoundB'),
+		url('../font/squareR/NanumSquareRoundB.woff2') format('woff2'),
+		url('../font/squareR/NanumSquareRoundB.woff') format('woff');
+}
+/* @font-face{
+	font-family:'basefont';
+	font-weight:400;
+	src:local('SpoqaHanSansNeo-Medium'),
+		url('../font/spoqa/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+		url('../font/spoqa/SpoqaHanSansNeo-Medium.woff') format('woff');
+} */
+
+::-webkit-scrollbar{width:6px;height:6px;border-left:0;background:#f8f9f9;}
+::-webkit-scrollbar-track{background-color:#f8f9f9;}
+::-webkit-scrollbar-thumb{border-radius:3px;background:#ccc;}
+::-webkit-scrollbar-thumb:hover{background:#999;}
+
+body{font-family:'basefont','Malgun Gothic',돋움;font-size:13px;font-weight:400;color:#111;letter-spacing:-.02em;}
+/* 크롬 */
+/* @media screen and (-webkit-min-device-pixel-ratio:0){
+	body{font-weight:700;}
+} */
+input{padding:0 0 0 4px;border:0;border-radius:4px;font-family:'Malgun Gothic',돋움;font-size:14px;outline:0in;/*min-height:28px;*/}
+
+.skipNav{position:absolute;top:-1px;right:0;left:0;z-index:100;background-color:#333;}
+.skipNav a{position:absolute;top:0;right:0;left:0;margin-top:-100px;padding:10px 25px;background:#000;text-align:center;white-space:nowrap;line-height:1;}
+.skipNav a:link{color:#333;}
+.skipNav a:focus{margin-top:0;color:#fff;text-decoration:underline;}

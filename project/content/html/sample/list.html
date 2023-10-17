@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<title>List | UI가이드</title>
+<!-- css -->
+<link rel="stylesheet" href="../../css/lib.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/common.css">
+
+<!-- javascript -->
+<script src="../../js/lib/jquery-3.6.4.min.js"></script>
+<script src="../../js/lib/sortable.js"></script>
+<script src="../../js/lib/swiper.min.js"></script>
+<script src="../../js/lib/modernizr.custom.min.js"></script>
+<script src="../../js/cock_ui.js"></script>
+</head>
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start"><h1>List</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="title-group">
+			<strong class="title">text-list st_dot</strong>
+		</div>
+
+		<ul class="text-list st_dot">
+			<li>내용이 들어갑니다.</li>
+			<li>상품가입이 원활하게 완료되지 않으신 경우, 상품가입 내역에서 처리결과를 반드시 확인하시기 바랍니다.</li>
+		</ul>
+
+		<div class="title-group">
+			<strong class="title">text-list st_dash</strong>
+		</div>
+
+		<ul class="text-list st_dash">
+			<li>내용이 들어갑니다.</li>
+			<li>상품가입이 원활하게 완료되지 않으신 경우, 상품가입 내역에서 처리결과를 반드시 확인하시기 바랍니다.</li>
+		</ul>
+
+		<div class="title-group">
+			<strong class="title">text-list st_dot &gt; st_dash</strong>
+		</div>
+
+		<ul class="text-list st_dot">
+			<li>
+				내용이 들어갑니다.
+				<ul class="text-list st_dash">
+					<li>내용이 들어갑니다.</li>
+					<li>상품가입이 원활하게 완료되지 않으신 경우, 상품가입 내역에서 처리결과를 반드시 확인하시기 바랍니다.</li>
+				</ul>
+			</li>
+			<li>상품가입이 원활하게 완료되지 않으신 경우, 상품가입 내역에서 처리결과를 반드시 확인하시기 바랍니다.</li>
+		</ul>
+
+		<div class="title-group">
+			<strong class="title">Info List - 아코디언형</strong>
+		</div>
+		<div class="info-list">
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<button type="button" aria-expanded="true" class="js_accordion-btn cs_collapsed">
+						<span class="accordion-title">알아두세요</span>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-collapse cs_show">
+						<ul class="text-list st_dot">
+							<li>내용이 들어갑니다.</li>
+							<li>상품가입이 원활하게 완료되지 않으신 경우, 상품가입 내역에서 처리결과를 반드시 확인하시기 바랍니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">Info List - 텍스트형</strong>
+		</div>
+
+		<div class="info-list">
+			<p class="info-list-title">알아두세요</p>
+			<p class="info-list-cont">
+				대출희망정보를 바탕으로 고객님께 맞는 대출상품을 자동으로 제안 드립니다. 대출 상품명, 가능금액, 예상금리는 대출을 조회한 당일만 유효하며, 고객님의 신용정보 변경 시 대출실행이 제한될
+				수 있습니다. (자세한 내용은 대출 실행 시 제공되는 대출거래약정서, 상품설명서 등을 참조하시기 바랍니다.)
+			</p>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">Table List - 우측정렬</strong>
+		</div>
+
+		<div class="table-list">
+			<ul>
+				<li>
+					<p class="table-list-title">이름</p>
+					<p class="table-list-desc">김농협</p>
+				</li>
+				<li>
+					<p class="table-list-title">휴대폰번호</p>
+					<p class="table-list-desc">010-1234-5678</p>
+				</li>
+				<li>
+					<p class="table-list-title">생년월일</p>
+					<p class="table-list-desc">1990-01-01</p>
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="title-group">
+			<strong class="title">Table List - 좌측정렬</strong>
+		</div>
+		<div class="table-list st_left">
+			<ul>
+				<li>
+					<p class="table-list-title">자택주소</p>
+					<p class="table-list-desc">11234<br>경기도 의왕시 성고개로 53<br>에이스청계타워 3층</p>
+				</li>
+				<li>
+					<p class="table-list-title">자택 전화번호</p>
+					<p class="table-list-desc">031-1111-****</p>
+				</li>
+				<li>
+					<p class="table-list-title">직장주소</p>
+					<p class="table-list-desc">11234<br>경기도 의왕시 성고개로 53<br>에이스청계타워 3층</p>
+				</li>
+				<li>
+					<p class="table-list-title">직장 전화번호</p>
+					<p class="table-list-desc">031-1111-****</p>
+				</li>
+				<li>
+					<p class="table-list-title">휴대전화</p>
+					<p class="table-list-desc">031-1111-****</p>
+				</li>
+				<li>
+					<p class="table-list-title">이메일주소</p>
+					<p class="table-list-desc">****kim@nonghyup.com</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">Table List - 아코디언형 (닫힘)</strong>
+		</div>
+		<div class="accordion-item">
+			<div class="table-list">
+				<ul class="table-list-main">
+					<li>
+						<p class="table-list-title">대출 신청금액</p>
+						<p class="table-list-desc">
+							<strong class="data-wrap"><em class="data">100000</em><span class="unit">원</span></strong>
+						</p>
+					</li>
+					<li>
+						<span class="table-list-title">대출금리</span>
+						<p class="table-list-desc">
+							<strong class="data-wrap c-primary"><em class="data">4.82</em><span
+									class="unit">%</span></strong><span class="mor">(6개월 MOR)</span>
+						</p>
+					</li>
+				</ul>
+				<div class="accordion-body">
+					<div class="accordion-collapse">
+						<ul class="table-list-sub">
+							<li>
+								<p class="table-list-title">기준금리(A)</p>
+								<p class="table-list-desc"><strong class="data-wrap"><em class="data">3.42</em><span
+											class="unit">%</span></strong></p>
+							</li>
+							<li>
+								<span class="table-list-title">가산금리(B)</span>
+								<p class="table-list-desc"><strong class="data-wrap"><em class="data">1.90</em><span
+											class="unit">%</span></strong></p>
+							</li>
+							<li>
+								<span class="table-list-title">우대금리(C)</span>
+								<p class="table-list-desc"><strong class="data-wrap"><em class="data">0.50</em><span
+											class="unit">%</span></strong></p>
+								<ul class="table-list-form">
+									<li>
+										<div class="form-check type2">
+											<input type="checkbox" id="chk0301" class="check-input">
+											<label for="chk0301" class="form-check-label">급여이체 50만원 이상</label>
+											<p class="table-list-desc"><strong class="data-wrap"><em
+														class="data">0.50</em><span class="unit">%</span></strong></p>
+										</div>
+									</li>
+									<li>
+										<div class="form-check type2">
+											<input type="checkbox" id="chk0302" class="check-input">
+											<label for="chk0302" class="form-check-label">신용카드보유 (NH채움카드)</label>
+											<p class="table-list-desc"><strong class="data-wrap"><em
+														class="data">0.20</em><span class="unit">%</span></strong></p>
+										</div>
+									</li>
+									<li>
+										<div class="form-check type2">
+											<input type="checkbox" id="chk0303" class="check-input">
+											<label for="chk0303" class="form-check-label">우량등급 우대금리<br>(통신등급
+												1~3등급)</label>
+											<p class="table-list-desc"><strong class="data-wrap"><em
+														class="data">0.20</em><span class="unit">%</span></strong></p>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="table-list-total">
+							<li>
+								<p class="table-list-title">예상금리(A+B-C)</p>
+								<p class="table-list-desc"><strong class="table-list-value c-primary"><em
+											class="data">4.82</em><span class="unit">%</span></strong></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="accordion-btn-wrap">
+				<button type="button" aria-expanded="false" class="js_accordion-btn">상세보기</button>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">아코디언 라디오 리스트</strong>
+		</div>
+		<div class="select-list">
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<button type="button" aria-expanded="false" class="js_accordion-btn">
+						<span class="accordion-title">1. 대출 신청 목적</span>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-collapse">
+						<div class="form-group st_row-5">
+							<div class="form-radio">
+								<input type="radio" name="rdo10" id="rdo1001" class="check-input">
+								<label for="rdo1001" class="form-check-label">가계자금</label>
+							</div>
+							<div class="form-radio">
+								<input type="radio" name="rdo10" id="rdo1002" class="check-input">
+								<label for="rdo1002" class="form-check-label">사업자금</label>
+							</div>
+							<div class="form-radio">
+								<input type="radio" name="rdo10" id="rdo1003" class="check-input" checked="">
+								<label for="rdo1003" class="form-check-label">주택자금</label>
+							</div>
+							<div class="form-radio">
+								<input type="radio" name="rdo10" id="rdo1004" class="check-input">
+								<label for="rdo1004" class="form-check-label">경조자금</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="form-value" style="display:block;">주택자금</p>
+			</div>
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<button type="button" aria-expanded="true" class="js_accordion-btn cs_collapsed">
+						<span class="accordion-title">2. 자산규모</span>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-collapse cs_show">
+						<div class="form-group type2">
+							<div class="form-radio">
+								<input type="radio" name="rdo11" id="rdo001" class="check-input" checked="">
+								<label for="rdo001" class="form-check-label">2천만원 미만</label>
+							</div>
+							<div class="form-radio">
+								<input type="radio" name="rdo11" id="rdo002" class="check-input">
+								<label for="rdo002" class="form-check-label">2천만 ~ 5천만원 미만</label>
+							</div>
+							<div class="form-radio">
+								<input type="radio" name="rdo11" id="rdo003" class="check-input">
+								<label for="rdo003" class="form-check-label">5천만 ~ 1억원 미만</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="form-value" style="display:block;">2천만원 미만</p>
+			</div>
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<button type="button" aria-expanded="true" class="js_accordion-btn cs_collapsed">
+						<span class="accordion-title">3.연체여부</span>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-collapse cs_show">
+						<div class="form-group st_row-5">
+							<div class="form-radio">
+								<input type="radio" name="rdo12" id="rdo1201" class="check-input" checked="">
+								<label for="rdo1201" class="form-check-label">없음</label>
+							</div>
+							<div class="form-radio">
+								<input type="radio" name="rdo12" id="rdo1202" class="check-input">
+								<label for="rdo1202" class="form-check-label">있음</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="agree-item">
+
+				<!-- <div class="form-check2">
+						<input type="checkbox" id="chk1702" class="check-input">
+						<label for="chk1702" class="form-check-label">신청하신 대출상품 적합 여부 확인을 위해 본인의 개인 정보를 수집, 이용, 제공 동의하는 것에 동의합니다.</label>
+					</div> -->
+				<div class="form-check">
+					<input type="checkbox" id="chk1701" class="check-input">
+					<label for="chk1701" class="form-check-label">신청하신 대출상품 적합 여부 확인을 위해 본인의 개인 정보를 수집, 이용, 제공 동의하는 것에
+						동의합니다.</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+</body>
+</html>
+

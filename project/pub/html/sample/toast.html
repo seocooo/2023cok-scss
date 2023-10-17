@@ -1,0 +1,28 @@
+@@include('head.html',{
+    page_title : "Toast"
+})
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start"><h1>Toast</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+
+	</div>
+	<!-- // container -->
+</div>
+<!-- // wrap -->
+<script>
+	$(function () {
+		setTimeout(function () {
+			cockUi.mobile.toast('토스트 메시지 입니다.')
+		}, 1000);
+	});
+
+</script>
+@@include('foot.html')

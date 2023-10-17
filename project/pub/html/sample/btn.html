@@ -1,0 +1,138 @@
+@@include('head.html',{
+    page_title : "Button"
+})
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+        <div class="header-start">
+            <h1>Button</h1>
+        </div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="title-group">
+			<strong class="title">버튼 기본형</strong>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn st_primary">primary</button>
+			<button type="button" class="btn" disabled="">btn:disabled</button>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">버튼 사이즈</strong>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn">XL Button</button>
+			<button type="button" class="btn st_lg">L Button</button>
+			<button type="button" class="btn st_md">M Button</button>
+			<button type="button" class="btn st_sm">S Button</button>
+			<button type="button" class="btn st_xs">XS Button</button>
+			<button type="button" class="btn st_t">T Button</button>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">버튼 라인형</strong>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn">line-default</button>
+			<button type="button" class="btn st_line-primary">line-primary</button>
+			<button type="button" class="btn st_line-gray">line-gray</button>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">버튼 라운드형</strong>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn st_primary st_round">primary</button>
+			<a href="javascript:;" role="button" class="btn st_primary st_round">a Link</a>
+			<button type="button" class="btn st_round" disabled="">btn:disabled</button>
+			<button type="button" class="btn st_round">default</button>
+			<button type="button" class="btn st_line-primary st_round">line-primary</button>
+			<button type="button" class="btn st_line-gray st_round">line-gray</button>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">텍스트 버튼</strong>
+		</div>
+		<div class="btn-group">
+			<a href="javascript:;" title="링크페이지로 이동" role="button" class="link">link-default</a>
+			<a href="javascript:;" title="링크페이지로 이동" role="button" class="link st_primary">link-primary</a>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">아이콘 버튼</strong>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn st_primary"><i class="ic-ico-help"></i></button>
+			<button type="button" class="btn st_primary st_sm"><i class="ic-ico-help"></i></button>
+			<button type="button" class="btn" disabled="">btn:disabled<i class="ic-ico-help"></i></button>
+			<button type="button" class="btn st_line-primary">line-primary<i class="ic-ico-help"></i></button>
+			<a href="javascript:;" title="링크페이지로 이동" class="link">link-default<i class="ic-ico-help"></i></a>
+		</div>
+		<br>
+		<br>
+		<div role="group" aria-label="진행 버튼" class="btn-group-progress">
+			<button type="button" class="btn st_line-primary">확인</button>
+		</div>
+		<div role="group" aria-label="진행 버튼" class="btn-group-progress">
+			<button type="button" class="btn st_primary">확인</button>
+		</div>
+		<div role="group" aria-label="진행 버튼" class="btn-group-progress">
+			<button type="button" class="btn st_primary" disabled="">확인</button>
+		</div>
+
+		<!-- 프로세스 버튼 -->
+		<div class="title-group">
+			<strong class="title">프로세스 버튼(level 1 Height:54px)</strong>
+		</div>
+		<div role="group" class="btn-group-progress">
+			<button type="button" class="btn" disabled="">확인</button>
+		</div>
+		<div role="group" class="btn-group-progress">
+			<button type="button" class="btn st_primary">확인</button>
+		</div>
+		<br>
+		<div role="group" class="btn-group-progress">
+			<button type="button" class="btn" disabled="">취소</button>
+			<button type="button" class="btn" disabled="">확인</button>
+		</div>
+		<div role="group" class="btn-group-progress">
+			<button type="button" class="btn">취소</button>
+			<button type="button" class="btn st_primary">확인</button>
+		</div>
+		<br>
+		<div role="group" aria-label="진행 버튼" class="btn-group-progress st_row-5">
+			<button type="button" class="btn" disabled="">취소</button>
+			<button type="button" class="btn" disabled="">확인</button>
+		</div>
+		<div role="group" aria-label="진행 버튼" class="btn-group-progress st_row-5">
+			<button type="button" class="btn st_line-primary">취소</button>
+			<button type="button" class="btn st_primary">확인</button>
+		</div>
+
+		<!-- 컨텐츠내 버튼 -->
+		<div class="title-group">
+			<strong class="title">컨텐츠내 버튼(level 2 Height:48px)</strong>
+		</div>
+		<div role="group" class="btn-group-progress">
+			<button type="button" class="btn st_lg" disabled="">조회</button>
+		</div>
+		<br>
+		<div role="group" class="btn-group-progress">
+			<button type="button" class="btn st_lg">조회</button>
+		</div>
+		<br>
+		<div role="group" class="btn-group-progress">
+			<button type="button" class="btn st_lg st_line-primary">조회</button>
+		</div>
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+@@include('head.html')

@@ -1,0 +1,152 @@
+:root {
+  /* input */
+  --btn-d: #dde0e3;
+}
+
+/* 버튼 */
+/* 버튼 기본형 */
+
+.btn {
+  display: inline-flex;
+  height: 54px;
+  padding: 0 20px;
+  border: 1px solid var(--gray-03);
+  border-radius: 12px;
+  background-color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gray-07);
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+
+  &.st_primary {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+  }
+
+  &.st_gray {
+    border-color: #dde0e3;
+    background-color: #dde0e3;
+    color: var(--white);
+  }
+
+  &.st_xl {
+    height: 54px;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  &.st_lg {
+    height: 48px;
+    padding: 0 16px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  &.st_md {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  &.st_sm {
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  &.st_xs {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  &.st_t {
+    height: 28px;
+    padding: 0 8px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  &.st_line-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  &.st_line-gray {
+    border-color: var(--gray-03);
+    color: var(--gray-08);
+  }
+
+  &.st_round {
+    border-radius: 50px;
+  }
+
+  &:disabled {
+    border-color: var(--btn-d);
+    background-color: var(--btn-d);
+    color: var(--white);
+    pointer-events: none;
+  }
+}
+
+/* .btn{display:inline-flex;height:54px;padding:0.375rem 0.75rem;border:1px solid transparent;border-radius:10px;background-color:var(--white);font-size:18px;font-weight:400;color:var(--black);vertical-align: middle;align-items:center;justify-content:center;} */
+
+/* 버튼 사이즈 */
+
+/* 버튼 라인형 */
+
+/* 버튼 라인형 */
+
+/* 텍스트 버튼 */
+
+.link {
+  display: inline-flex;
+  font-size: 14px;
+  text-decoration: underline;
+  align-items: center;
+  text-underline-position: under;
+
+  &.st_primary {
+    color: var(--primary);
+  }
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+/* progress 버튼 */
+
+.btn-group-progress {
+  display: flex;
+  padding: 0 var(--wrap-pdrl) 40px;
+  background-color: #fff;
+  gap: 8px;
+
+  .btn {
+    flex-grow: 1;
+
+    &:first-child {
+      min-width: 32%;
+    }
+
+    &:last-child {
+      width: 78%;
+      min-width: 32%;
+    }
+  }
+
+  &.st_row-5 .btn {
+    width: 50%;
+  }
+}

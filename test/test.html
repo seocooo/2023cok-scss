@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-title" content="NH Bank">
+	<meta http-equiv="imagetoolbar" content="no">
+	<meta name="robots" content="no-index,follow">
+	<meta name="title" content="">
+	<meta name="author" content="">
+	<meta name="content" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>A Type main balance max 1 &gt; Prototype &gt; 콕뱅크</title>
+	<link rel="shortcut icon" href="#">
+	<!-- <script src="js/jquery-1.9.1.min.js"></script> -->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+
+<style type="text/css">
+:root{
+    --primary-main-white:#fff;
+}
+body{background-color:#F5F6F8}
+.container{padding:50px 24px 100px;overflow:hidden;}
+*{-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;box-sizing:border-box;/*pointer-events:none;*/}
+.swiper-container{overflow:visible;padding-bottom:37px;}
+.swiper-slide{border-radius: 16px;background-color: var(--primary-main-white, #FFF);box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:20px;line-height:0;}
+.swiper-button-next, .swiper-button-prev, .swiper-button-next, .swiper-button-prev, .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{opacity:0;}
+.swiper-pagination-bullet{width:5px;height:5px;background-color:#b0b7bf;opacity:1;border-radius:3px;}
+.swiper-pagination-bullet-active{background-color:#616e7c;width:16px}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 2px}
+/* .sortable_wrap:after{display: block;clear: both; content: '';} */
+.list-group {padding:0;border-radius: 16px;background-color: var(--primary-main-white, #FFF);box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12)}
+.list-group.inr{background-color: transparent !important;box-shadow:none;display:flex;}
+.list-group.inr:after{display:block;content:'';clear:both;}
+.sortable_wrap > .list-group{box-shadow:none;background-color:transparent;}
+.sortable_wrap>.list-group>.list-group-item{margin-bottom:16px;margin-left:0}
+.sortable_wrap .imgWrap{margin-bottom:16px;}
+.list-group .list-group-item{margin:0;border-radius:16px;position:relative}
+.list-group .list-group-item img{margin:0;border-radius:16px}
+/* .list-group .list-group-item:after{display:block;content:'';clear:both;} */
+.list-group-item.last{box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);background-color:#fff}
+.list-group-item button{display:none;position:absolute;right:-6px;top:-6px;width:26px;height:26px}
+.list-group-item button.active{display: block;}
+.list-group-item button:before, .list-group-item button:after{display:block;content:'';position:absolute;top:0;right:0}
+.list-group-item button:before{width:26px;height:26px;filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));background-image: url(images/btn_delete_a_max.png);background-size: 100%;}
+.list-group-item button.active {display:block;}
+.list-group.inr .list-group-item{/*float:left;width:calc((100% - 34px)/3);*/width:calc((100% - 34px)/3) !important;height: auto !important;padding:0}
+.list-group.inr .list-group-item:last-child{float:right;}
+.list-group-item.shaking{animation:shaking01 .3s linear infinite}
+.list-group-item + 	.list-group-item{margin-left:17px}
+.highlight, .ghost {background-color:#B7F8C7 !important;opacity:1 !important;}
+.btnWrap{text-align:center;line-height: 0;}
+.btnWrap img{height:100%;}
+.footer{border-radius: 16px 16px 0px 0px;background: var(--primary-main-white, #FFF);box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10)}
+@keyframes shaking01 {
+    0% {transform:rotate(0deg)}
+    25% {transform:rotate(1deg)}
+    50% {transform:rotate(0deg)}
+    75% {transform:rotate(-1deg)}
+    100% {transform:rotate(0deg)}
+}
+</style>
+</head>
+
+<body>
+	<div class="wrap aTypeMax">
+        <div class="header">
+            <img src="images/a_max_img_header.png" alt="">
+        </div>
+		<div class="container">
+            <div class="imgWrap" style="margin:12px 0 16px">
+                <img src="images/a_max_img_banner01.png" alt="">
+            </div>
+            <div class="swiper">
+                <div id="swiper1" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" tabindex="0">
+                            <img src="images/a_max_img_swiper01.png" alt="">
+                        </div>
+                        <div class="swiper-slide" tabindex="0"><img src="images/a_max_img_swiper01.png" alt=""></div>
+                        <div class="swiper-slide" tabindex="0"><img src="images/a_max_img_swiper01.png" alt=""></div>
+                    </div>
+                    <div class="swiper-button-contr">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="sortable_wrap" aria-live="polite">
+				<ul class="list-group">
+					<li class="list-group-item"><img src="images/a_max_img_service01.png" alt=""><button class="js-remove"></button></li>
+					<li class="list-group-item"><img src="images/a_max_img_service02.png" alt=""><button class="js-remove"></button></li>
+					<li class="list-group-item">
+						<ul class="list-group inr">
+							<li class="list-group-item"><img src="images/a_max_img_service0301.png" alt=""><button class="js-remove"></button></li>
+							<li class="list-group-item"><img src="images/a_max_img_service0302.png" alt=""><button class="js-remove"></button></li>
+							<li class="list-group-item"><img src="images/a_max_img_service0303.png" alt=""><button class="js-remove"></button></li>
+						</ul>
+					</li>
+                    <li class="imgWrap">
+                        <img src="images/a_max_img_banner02.png" alt="">
+                    </li>
+					<li class="list-group-item"><img src="images/a_max_img_service04.png" alt=""><button class="js-remove"></button></li>
+					<li class="list-group-item"><img src="images/a_max_img_service05.png" alt=""><button class="js-remove"></button></li>
+                    <li class="list-group-item"><img src="images/a_max_img_service06.png" alt=""><button class="js-remove"></button></li>
+                    <li class="list-group-item">
+						<ul class="list-group inr">
+							<li class="list-group-item"><img src="images/a_max_img_service0701.png" alt=""><button class="js-remove"></button></li>
+							<li class="list-group-item"><img src="images/a_max_img_service0702.png" alt=""><button class="js-remove"></button></li>
+							<li class="list-group-item"><img src="images/a_max_img_service0703.png" alt=""><button class="js-remove"></button></li>
+						</ul>
+					</li>
+                    <li class="imgWrap">
+                        <img src="images/a_max_img_banner03.png" alt="">
+                    </li>
+                    <li class="list-group-item"><img src="images/a_max_img_service08.png" alt=""><button class="js-remove"></button></li>
+					<li class="list-group-item"><img src="images/a_max_img_service09.png" alt=""><button class="js-remove"></button></li>
+				</ul>
+			</div>
+            <div class="btnWrap">
+                <a href="#" style="display:inline-block;"><img src="images/btn_service_edit.png" alt="" style="width:96px;height:33px;"></a>
+            </div>
+		</div>
+        <div class="footer">
+            <img src="images/a_max_img_footer.png" alt="">
+        </div>
+	</div>
+</body>
+<script>
+	$(function () {
+
+        var sortableWrap = $(document).find('.sortable_wrap'),
+            listGroupItem = sortableWrap.find('.list-group-item'),
+            listGroup = sortableWrap.find('.list-group .list-group'),
+            nestedSortables = sortableWrap.find('.list-group'),
+            listDel= sortableWrap.find(".delete");
+
+        $(document)
+            .on('addCls', '.list-group' ,function(){
+                //console.log('addCls');
+                $('.list-group').each(function(){
+                    if($(this).find('>.list-group-item').length === 3){
+                        $(this).addClass('full').removeClass('empty');
+                    } else if($(this).find('>.list-group-item').length === 0) {
+                        $(this).addClass('empty').removeClass('full');
+                    } else {
+                        $(this).removeClass('empty full');
+                    }
+                });
+            })
+            .on('lastCls', '.list-group-item' ,function(){
+                //console.log('last');
+                $('.list-group-item').each(function(){
+                    //$('.sortable_wrap .list-group-item').removeClass('last');
+                    $(this).closest('.list-group-item').removeClass('last');
+                    if($(this).find('>.list-group').length === 0 || $(this).find('>.list-group').find('>.list-group-item').length === 0) $(this).addClass('last');
+                });
+            })
+            .on('sortable', '.sortable_wrap' ,function(){
+                console.log('sortable');
+
+                $( ".sortable_wrap" ).sortable({
+                    items: ">.list-group>.list-group-item",
+                    //connectWith: "div.list-group",
+                    helper : 'clone',
+                    containment: 'parent',
+                    animation: 200,
+                    //handle:'.list-group-item',
+                    cancel:'.imgWrap',
+                    delay: 500,
+                    //axis: 'x, y',
+                    //revert: true,
+                    start: function (e, ui) { // will be triggered after 500ms
+                        //ui.helper.addClass('highlight');
+                        $('.js-remove').addClass('active');
+                        $('.list-group-item.last').addClass('shaking');
+                    },
+                    beforeStop: function (e, ui) {
+                        setTimeout(function(){
+                            $('.js-remove').removeClass('active');
+                            $('.list-group-item.last').removeClass('shaking');
+                        },3000);
+                    },
+                    // activate: function( event, ui ) {
+                    //     $('.js-remove').addClass('active');
+                    //     $('.list-group-item.last').addClass('shaking');
+                    // },
+                    update: function( event, ui ) {
+                        $('.js-remove').removeClass('active');
+                        $('.list-group-item.last').removeClass('shaking');
+                    },
+                    stop: function( event, ui ) {
+                        setTimeout(function(){
+                            $('.js-remove').removeClass('active');
+                            $('.list-group-item.last').removeClass('shaking');
+                        },3000);
+                    }
+                }).disableSelection().on('click','.js-remove',function(){
+                    $(this).parent().remove();
+                    $('.js-remove').removeClass('active');
+                    $('.list-group-item.last').removeClass('shaking');
+                });
+
+                $( ".list-group.inr" ).sortable({
+                    items: ">.list-group-item.last",
+                    helper : 'clone',
+                    containment: 'parent',
+                    animation: 200,
+                    delay: 500,
+                    axis: 'x',
+                    //revert: 500,
+                    start: function (e, ui) { // will be triggered after 500ms
+                        //ui.helper.addClass('highlight');
+                        $('.js-remove').addClass('active');
+                        $('.list-group-item.last').addClass('shaking');
+                    },
+                    // activate: function( event, ui ) {
+                    //     $('.js-remove').addClass('active');
+                    //     $('.list-group-item.last').addClass('shaking');
+                    // },
+                    update: function( event, ui ) {
+                        $('.js-remove').removeClass('active');
+                        $('.list-group-item.last').removeClass('shaking');
+                    }
+                }).disableSelection();
+
+                $('.list-group').trigger('addCls');
+                $('.list-group-item').trigger('lastCls');
+            }).find('.sortable_wrap').trigger('sortable');
+
+
+        var swiper1 = new Swiper('#swiper1', {
+            slidesPerView: 1,
+            spaceBetween: 12,
+            centeredSlides: true,
+            pagination: {
+                el: '#swiper1 .swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '#swiper1 .swiper-button-next',
+                prevEl: '#swiper1 .swiper-button-prev'
+            },
+            a11y: { // 웹접근성
+                enabled: true,
+                prevSlideMessage: '이전 슬라이드',
+                nextSlideMessage: '다음 슬라이드',
+                slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+            },
+            on: {
+                init: function() {
+                    $("#swiper1").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                    $("#swiper1").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false).attr("tabindex", 0);
+                    $(".swiper-pagination-bullet").each(function(index, item){
+                        $(item).attr("aria-label",index + 1 + "슬라이드로 가기");
+                        $(item).removeAttr("aria-current")
+                    });
+                },
+                slideChangeTransitionEnd: function () {
+                    $("#swiper1").find(".swiper-slide").attr("aria-hidden", true).removeAttr("tabindex");
+                    $("#swiper1").find(".swiper-slide.swiper-slide-active").attr("aria-hidden", false)	.attr("tabindex", 0);
+                },
+                slideChange: function(){
+                    $(".swiper-pagination-bullet").each(function(index, item){
+                        $(this).attr({"aria-label":index + 1 + '슬라이드'});
+                        // $(item).attr("aria-pressed",true);
+                    });
+                }
+            }
+        });
+
+
+    });
+</script>
+</html>

@@ -1,0 +1,63 @@
+@@include('head.html',{
+    page_title : "Accordion"
+})
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+        <div class="header-start">
+            <h1>Accordion</h1>
+        </div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="title-group">
+			<strong class="title">Accordion 기본형</strong>
+		</div>
+		<div class="accordion-wrap">
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<button type="button" aria-expanded="false" class="js_accordion-btn">
+						<span class="accordion-title">title1</span>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-collapse">
+						Accordion Item #1
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<button type="button" aria-expanded="false" class="js_accordion-btn">
+						<span class="accordion-title">title2</span>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-collapse">
+						Accordion Item #2
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<div class="accordion-header">
+					<button type="button" aria-expanded="false" class="js_accordion-btn cs_collapsed">
+						<span class="accordion-title">title3</span>
+					</button>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-collapse cs_show">
+						Accordion Item #3
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+@@include('foot.html')

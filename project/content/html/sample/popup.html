@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<title>Popup | UI가이드</title>
+<!-- css -->
+<link rel="stylesheet" href="../../css/lib.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/common.css">
+
+<!-- javascript -->
+<script src="../../js/lib/jquery-3.6.4.min.js"></script>
+<script src="../../js/lib/sortable.js"></script>
+<script src="../../js/lib/swiper.min.js"></script>
+<script src="../../js/lib/modernizr.custom.min.js"></script>
+<script src="../../js/cock_ui.js"></script>
+</head>
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start"><h1>Popup</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="title-group">
+			<strong class="title">기본 팝업</strong>
+		</div>
+		<button type="button" data-modal="modal1" class="btn st_primary js_modal-open">모달 팝업 버튼</button>
+
+		<div role="dialog" aria-hidden="true" id="modal1" class="modal">
+			<div class="modal-dim"></div>
+			<div class="modal-inner">
+				<div class="modal-header">
+					<div class="modal-title">전자문서 미리보기</div>
+				</div>
+				<div class="modal-content">모달 콘텐츠</div>
+				<div class="modal-footer btn-group-progress">
+					<button type="button" class="btn st_line-default btn-close js_modal-close">취소</button>
+					<button type="button" class="btn st_primary">확인</button>
+				</div>
+				<button title="닫기" class="modal-close js_modal-close"><i class="ic-btn-close"></i></button>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">중앙 정렬 팝업</strong>
+		</div>
+		<button type="button" data-modal="modal2" class="btn st_primary js_modal-open">중앙 정렬 팝업 팝업 버튼</button>
+
+		<div role="dialog" aria-hidden="true" id="modal2" class="modal st_center">
+			<div class="modal-dim"></div>
+			<div class="modal-inner">
+				<div class="modal-header">
+					<div class="modal-title">간편인증 전자서명</div>
+				</div>
+				<div class="modal-content">
+					<p class="modal-cont-text">고객님은 간편인증 거래 고객입니다.<br>
+						[확인] 선택 시 거래가 완료됩니다.</p>
+					<p class="modal-cont-text">거래를 진행하시겠습니까?</p>
+				</div>
+				<div class="modal-footer btn-group-progress">
+					<button type="button" class="btn st_line-default js_modal-close">취소</button>
+					<button type="button" class="btn st_primary">확인</button>
+				</div>
+				<button title="닫기" class="modal-close js_modal-close"><i class="ic-btn-close"></i></button>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">슬라이드 팝업 (bottom)</strong>
+		</div>
+		<button type="button" data-modal="modal3" class="btn st_primary js_modal-open">modal3슬라이드 팝업 버튼</button>
+		<a href="modal3" role="button" class="js_modal-open">link버튼</a>
+
+		<div role="dialog" aria-hidden="true" aria-labelledby="modal1-label" id="modal3" class="modal st_bottom-sheet">
+			<div class="modal-dim"></div>
+			<div class="modal-inner">
+				<div class="modal-header">
+					<div class="modal-title">간편인증 전자서명</div>
+				</div>
+				<div class="modal-content">
+					<p class="modal-cont-text">고객님은 간편인증 거래 고객입니다.<br>
+						[확인] 선택 시 거래가 완료됩니다.</p>
+					<p class="modal-cont-text">거래를 진행하시겠습니까?</p>
+				</div>
+				<div class="modal-footer btn-group-progress">
+					<button type="button" class="btn st_line-default js_modal-close">취소</button>
+					<button type="button" class="btn st_primary">확인</button>
+				</div>
+				<button title="닫기" class="modal-close js_modal-close"><i class="ic-btn-close"></i></button>
+			</div>
+		</div>
+		<br><br>
+		<button type="button" data-modal="modal4" class="btn st_primary js_modal-open">비밀번호 설정창</button>
+
+		<div role="dialog" aria-hidden="true" id="modal4" class="modal st_bottom-sheet">
+			<div class="modal-dim"></div>
+			<div class="modal-inner">
+				<div class="modal-header">
+					<h2 class="modal-title">비밀번호 설정</h2>
+				</div>
+				<div class="modal-content">
+					<div class="modal-password">
+						<div class="password-wrap">
+							<div title="간편비밀번호 4자리 입력" role="button" aria-label="0자리 입력됨" aria-live="assertive"
+								id="live_count" class="password">
+								<!-- [D]: 보안키패드에서 입력될 때 cs_active 클래스 추가 -->
+								<span role="img" class="inset_num cs_active"></span>
+								<span role="img" class="inset_num cs_active"></span>
+								<span role="img" class="inset_num"></span>
+								<span role="img" class="inset_num"></span>
+							</div>
+						</div>
+						<!-- 키패드 -->
+						<div aria-controls="live_count" class="keypad">
+							<ul>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="del"><i class="ic-btn-back"></i><span
+											class="blind">삭제</span></button></li>
+								<li><button type="button" class="insert_num">1</button></li>
+								<li><button type="button" class="shuffle">재배치</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer btn-group-progress">
+					<button type="button" class="btn st_primary">확인</button>
+				</div>
+				<button title="닫기" class="modal-close js_modal-close"><i class="ic-btn-close"></i></button>
+			</div>
+		</div>
+
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<title>@@page_title | UI가이드</title>
+<!-- css -->
+<link rel="stylesheet" href="../../css/lib.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/common.css">
+
+<!-- javascript -->
+<script src="../../js/lib/jquery-3.6.4.min.js"></script>
+<script src="../../js/lib/sortable.js"></script>
+<script src="../../js/lib/swiper.min.js"></script>
+<script src="../../js/lib/modernizr.custom.min.js"></script>
+<script src="../../js/cock_ui.js"></script>
+</head>
+<body>
+

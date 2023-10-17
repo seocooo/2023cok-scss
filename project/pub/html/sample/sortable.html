@@ -1,0 +1,301 @@
+@@include('head.html',{
+    page_title : "Sortable"
+})
+<style type="text/css">
+	body {
+		background-color: #EFFAFB
+	}
+
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	* {
+		-webkit-tap-highlight-color: transparent;
+		user-select: none;
+		-webkit-user-select: none;
+		box-sizing: border-box;
+		/*pointer-events:none;*/
+	}
+
+	.list-group,
+	.grid-sortable {
+		min-height: 100px;
+		padding: 0;
+		border-radius: 16px;
+		background: var(--primary-main-white, #FFF);
+		box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12)
+	}
+
+	.list-group .list-group,
+	.grid-sortable {
+		background-color: lightgray
+	}
+
+	.list-group.full,
+	.grid-sortable.full {
+		background-color: pink
+	}
+
+	.list-group.empty,
+	.grid-sortable.empty {
+		background-color: darkgrey
+	}
+
+	.sortable_wrap>.list-group>.list-group-item {
+		margin-bottom: 10px;
+		margin-left: 0
+	}
+
+	.list-group .list-group-item,
+	.grid-square {
+		min-height: 100px;
+		margin: 0;
+		border-radius: 16px;
+		/*background-color:#eee;*/
+		position: relative
+	}
+
+	.list-group-item.last,
+	.grid-square {
+		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
+		background-color: #fff
+	}
+
+	.list-group-item button,
+	.grid-square button {
+		display: block;
+		position: absolute;
+		right: -5px;
+		top: -5px;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: solid 1px rgb(0, 0, 0, 0.2);
+		font-size: 11px
+	}
+
+	.grid-square,
+	.list-group .list-group-item .list-group-item,
+	.list-group-item.sortable-chosen .list-group-item {
+		float: left;
+		width: calc((100% - 20px)/3);
+		height: 90px;
+		padding: 10px
+	}
+
+	/* .list-group .list-group>.list-group-item */
+	.sortable-chosen,
+	.list-group-item.active,
+	.sortable-chosen.grid-square {
+		animation: shaking01 .4s linear infinite
+	}
+
+	.list-group-item+.list-group-item,
+	.grid-square+.grid-square {
+		margin-left: 10px
+	}
+
+	.highlight {
+		background-color: #B7F8C7 !important;
+	}
+
+	@keyframes shaking01 {
+		0% {
+			transform: rotate(0deg)
+		}
+
+		25% {
+			transform: rotate(3deg)
+		}
+
+		50% {
+			transform: rotate(0eg)
+		}
+
+		75% {
+			transform: rotate(-3deg)
+		}
+
+		100% {
+			transform: rotate(0deg)
+		}
+	}
+
+	@keyframes shaking02 {
+		0% {
+			-webkit-transform: translate(2px, 1px) rotate(0deg)
+		}
+
+		10% {
+			-webkit-transform: translate(-1px, -2px) rotate(-2deg)
+		}
+
+		20% {
+			-webkit-transform: translate(-3px, 0px) rotate(3deg)
+		}
+
+		30% {
+			-webkit-transform: translate(0px, 2px) rotate(0deg)
+		}
+
+		40% {
+			-webkit-transform: translate(1px, -1px) rotate(1deg)
+		}
+
+		50% {
+			-webkit-transform: translate(-1px, 2px) rotate(-1deg)
+		}
+
+		60% {
+			-webkit-transform: translate(-3px, 1px) rotate(0deg)
+		}
+
+		70% {
+			-webkit-transform: translate(2px, 1px) rotate(-2deg)
+		}
+
+		80% {
+			-webkit-transform: translate(-1px, -1px) rotate(4deg)
+		}
+
+		90% {
+			-webkit-transform: translate(2px, 2px) rotate(0deg)
+		}
+
+		100% {
+			-webkit-transform: translate(1px, -2px) rotate(-1deg)
+		}
+	}
+
+</style>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start"><h1>Sortable</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="title-group">
+			<strong class="title">Nest Sortable / Grid Sortable</strong>
+		</div>
+
+		<div class="sortable_wrap">
+			<div class="list-group">
+				<div class="list-group-item">nested Item 1
+					<div class="list-group">
+						<div class="list-group-item">Item 1-1 <button class="delete">X</button></div>
+						<div class="list-group-item">Item 1-2 <button class="delete">X</button></div>
+						<div class="list-group-item">Item 1-3 <button class="delete">X</button></div>
+					</div>
+				</div>
+				<div class="list-group-item">nested Item 2
+					<div class="list-group">
+						<div class="list-group-item">Item 2-1 <button class="delete">X</button></div>
+					</div>
+				</div>
+				<div class="list-group-item">nested Item 3
+					<div class="list-group">
+						<div class="list-group-item">Item 3-1 <button class="delete">X</button></div>
+						<div class="list-group-item">Item 3-2 <button class="delete">X</button></div>
+						<div class="list-group-item">Item 3-3 <button class="delete">X</button></div>
+					</div>
+				</div>
+				<div class="list-group-item">nested Item 4
+					<div class="list-group">
+						<div class="list-group-item">Item 4-1 <button class="delete">X</button></div>
+						<div class="list-group-item">Item 4-2 <button class="delete">X</button></div>
+					</div>
+				</div>
+				<div class="list-group-item">nested Item 5
+					<div class="list-group">
+						<div class="list-group-item">Item 5-1 <button class="delete">X</button></div>
+						<div class="list-group-item">Item 5-2 <button class="delete">X</button></div>
+					</div>
+				</div>
+				<div class="list-group-item">nested Item 6
+					<div class="list-group"></div>
+				</div>
+				<div class="list-group-item">nested Item 7 <button class="delete">X</button></div>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+<script>
+	$(function () {
+
+		var sortableWrap = $(document).find('.sortable_wrap'),
+			listGroupItem = sortableWrap.find('.list-group-item'),
+			listGroup = sortableWrap.find('.list-group .list-group'),
+			nestedSortables = sortableWrap.find('.list-group'),
+			listDel = sortableWrap.find(".delete");
+
+
+		$(document)
+			.on('addCls', '.list-group', function () {
+				console.log('addCls');
+				$('.list-group').each(function () {
+					if ($(this).find('>.list-group-item').length === 3) {
+						$(this).addClass('full').removeClass('empty');
+					} else if ($(this).find('>.list-group-item').length === 0) {
+						$(this).addClass('empty').removeClass('full');
+					} else {
+						$(this).removeClass('empty full');
+					}
+				});
+			})
+			.on('lastCls', '.list-group-item', function () {
+				console.log('last');
+				$('.list-group-item').each(function () {
+					//$('.sortable_wrap .list-group-item').removeClass('last');
+					$(this).closest('.list-group-item').removeClass('last');
+					if ($(this).find('>.list-group').length === 0 || $(this).find('>.list-group').find(
+							'>.list-group-item').length === 0) $(this).addClass('last');
+				});
+			})
+			.on('sortable', '.sortable_wrap', function () {
+				console.log('sortable');
+				for (var i = 0; i < nestedSortables.length; i++) {
+					new Sortable(nestedSortables[i], {
+						group: {
+							name: 'nested',
+							put: function (to, from) {
+								return to.el.children.length < 3;
+							},
+							pull: function (to, from) {
+								return from.el.parentNode.className != 'sortable_wrap';
+							}
+						},
+						animation: 150,
+						onEnd: function () {
+							console.log('onEnd');
+							$('.list-group').trigger('addCls');
+							$('.list-group-item').trigger('lastCls');
+
+						}
+					});
+				}
+				$('.list-group').trigger('addCls');
+				$('.list-group-item').trigger('lastCls');
+			})
+			.on('click', '.sortable_wrap .delete', function () {
+				$(this).parent().remove();
+				// setTimeout(function() {
+				//     cockUi.mobile.toast('click')
+				// }, 1000);
+			}).find('.sortable_wrap').trigger('sortable');
+	});
+
+</script>
+
+@@include('foot.html')

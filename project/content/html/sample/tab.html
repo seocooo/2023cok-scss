@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<title>Tab | UI가이드</title>
+<!-- css -->
+<link rel="stylesheet" href="../../css/lib.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/common.css">
+
+<!-- javascript -->
+<script src="../../js/lib/jquery-3.6.4.min.js"></script>
+<script src="../../js/lib/sortable.js"></script>
+<script src="../../js/lib/swiper.min.js"></script>
+<script src="../../js/lib/modernizr.custom.min.js"></script>
+<script src="../../js/cock_ui.js"></script>
+</head>
+<body>
+
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start"><h1>Tab</h1></div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="title-group">
+			<strong class="title">1 Depth Tabs(Fixed)</strong>
+		</div>
+		<div class="tab-wrap st_line">
+			<ul class="tab-nav">
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel01" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel02" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+			</ul>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel01" class="tab-panel cs_active">
+					<p>탭 컨텐츠1</p>
+				</div>
+				<div role="tabpanel" id="tab-panel02" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">1 Depth Tabs(Flexible) M</strong>
+		</div>
+		<div class="tab-wrap st_line">
+			<ul role="tablist" class="tab-nav st_tab-swipe">
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel11" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel12" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel13" aria-selected="false" class="tab-item">tab
+						menu3</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel14" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel15" aria-selected="false" class="tab-item">tab
+						menu5</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel16" aria-selected="false" class="tab-item">tab
+						menu6</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel1" aria-selected="false" class="tab-item">tab
+						menu7</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel1" aria-selected="false" class="tab-item">tab
+						menu8</button>
+				</li>
+			</ul>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel11" class="tab-panel cs_active">
+					<p>탭 컨텐츠1</p>
+				</div>
+				<div role="tabpanel" id="tab-panel12" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+				<div role="tabpanel" id="tab-panel13" class="tab-panel">
+					<p>탭 컨텐츠3</p>
+				</div>
+				<div role="tabpanel" id="tab-panel14" class="tab-panel">
+					<p>탭 컨텐츠4</p>
+				</div>
+				<div role="tabpanel" id="tab-panel15" class="tab-panel">
+					<p>탭 컨텐츠5</p>
+				</div>
+				<div role="tabpanel" id="tab-panel16" class="tab-panel">
+					<p>탭 컨텐츠6</p>
+				</div>
+				<div role="tabpanel" id="tab-panel17" class="tab-panel">
+					<p>탭 컨텐츠7</p>
+				</div>
+				<div role="tabpanel" id="tab-panel18" class="tab-panel">
+					<p>탭 컨텐츠8</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">1 Depth Tabs(Flexible) S</strong>
+		</div>
+		<div class="tab-wrap st_line">
+			<ul role="tablist" class="tab-nav st_tab-swipe st_narrow">
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel21" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel22" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel23" aria-selected="false" class="tab-item">tab
+						menu3</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel24" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel25" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel26" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel27" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel28" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+			</ul>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel21" class="tab-panel cs_active">
+					<p>탭 컨텐츠1</p>
+				</div>
+				<div role="tabpanel" id="tab-panel22" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+				<div role="tabpanel" id="tab-panel23" class="tab-panel">
+					<p>탭 컨텐츠3</p>
+				</div>
+				<div role="tabpanel" id="tab-panel24" class="tab-panel">
+					<p>탭 컨텐츠4</p>
+				</div>
+				<div role="tabpanel" id="tab-panel25" class="tab-panel">
+					<p>탭 컨텐츠5</p>
+				</div>
+				<div role="tabpanel" id="tab-panel26" class="tab-panel">
+					<p>탭 컨텐츠6</p>
+				</div>
+				<div role="tabpanel" id="tab-panel27" class="tab-panel">
+					<p>탭 컨텐츠7</p>
+				</div>
+				<div role="tabpanel" id="tab-panel28" class="tab-panel">
+					<p>탭 컨텐츠8</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">2 Depth Tabs(Flexible)</strong>
+		</div>
+		<div class="tab-wrap st_round">
+			<ul role="tablist" class="tab-nav">
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel31" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel32" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel33" aria-selected="false" class="tab-item">tab
+						menu3</button>
+				</li>
+			</ul>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel31" class="tab-panel cs_active">
+					<p>탭 컨텐츠1</p>
+				</div>
+				<div role="tabpanel" id="tab-panel32" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+				<div role="tabpanel" id="tab-panel33" class="tab-panel">
+					<p>탭 컨텐츠3</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-wrap st_round">
+			<ul role="tablist" class="tab-nav st_tab-swipe">
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel41" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel42" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel43" aria-selected="false" class="tab-item">tab
+						menu3</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel44" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel45" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel46" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel47" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel48" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+			</ul>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel41" class="tab-panel cs_active">
+					<p>탭 컨텐츠1</p>
+				</div>
+				<div role="tabpanel" id="tab-panel42" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+				<div role="tabpanel" id="tab-panel43" class="tab-panel">
+					<p>탭 컨텐츠3</p>
+				</div>
+				<div role="tabpanel" id="tab-panel44" class="tab-panel">
+					<p>탭 컨텐츠4</p>
+				</div>
+				<div role="tabpanel" id="tab-panel45" class="tab-panel">
+					<p>탭 컨텐츠5</p>
+				</div>
+				<div role="tabpanel" id="tab-panel46" class="tab-panel">
+					<p>탭 컨텐츠6</p>
+				</div>
+				<div role="tabpanel" id="tab-panel47" class="tab-panel">
+					<p>탭 컨텐츠7</p>
+				</div>
+				<div role="tabpanel" id="tab-panel48" class="tab-panel">
+					<p>탭 컨텐츠8</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">3 Depth Tabs(Segment)</strong>
+		</div>
+		<div class="tab-wrap st_box">
+			<ul role="tablist" class="tab-nav">
+				<li role="presentation" class="tab-list cs_active">
+					<button role="tab" aria-controls="tab-panel51" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel52" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+			</ul>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel51" class="tab-panel cs_active">
+					<p>탭 컨텐츠1</p>
+				</div>
+				<div role="tabpanel" id="tab-panel52" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-wrap st_box">
+			<ul role="tablist" class="tab-nav">
+				<li role="presentation" class="tab-list cs_active">
+					<button role="tab" aria-controls="tab-panel61" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel62" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel63" aria-selected="false" class="tab-item">tab
+						menu3</button>
+				</li>
+			</ul>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel61" class="tab-panel cs_active">
+					<p>탭 컨텐츠1</p>
+				</div>
+				<div role="tabpanel" id="tab-panel62" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+				<div role="tabpanel" id="tab-panel63" class="tab-panel">
+					<p>탭 컨텐츠3</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="title-group">
+			<strong class="title">Expanded Tab List</strong>
+		</div>
+		<div class="tab-wrap st_line st_fold">
+			<ul role="tablist" class="tab-nav st_tab-swipe">
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel71" aria-selected="true" class="tab-item cs_active">tab
+						menu1</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel72" aria-selected="false" class="tab-item">tab
+						menu2</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel73" aria-selected="false" class="tab-item">tab
+						menu3</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel74" aria-selected="false" class="tab-item">tab
+						menu4</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel75" aria-selected="false" class="tab-item">tab
+						menu5</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel76" aria-selected="false" class="tab-item">tab
+						menu6</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel77" aria-selected="false" class="tab-item">tab
+						menu7</button>
+				</li>
+				<li role="presentation" class="tab-list">
+					<button role="tab" aria-controls="tab-panel78" aria-selected="false" class="tab-item">tab
+						menu8</button>
+				</li>
+			</ul>
+			<button type="button" class="btn-tab-fold" aria-label="메뉴 열기" aria-controls="tab-panel71"></button>
+			<div class="tab-container">
+				<div role="tabpanel" id="tab-panel71" class="tab-panel">
+					<div class="tab-wrap st_round">
+						<ul role="tablist" class="tab-nav st_inline">
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="true" class="tab-item cs_active">조회</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">송금출금</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">공과금</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">계좌관리</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">NH콕모임</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">카드</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">마이데이터</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">외환</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">간편결제</button>
+							</li>
+							<li role="presentation" class="tab-list">
+								<button role="tab" aria-selected="false" class="tab-item">콕송금</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div role="tabpanel" id="tab-panel72" class="tab-panel">
+					<p>탭 컨텐츠2</p>
+				</div>
+				<div role="tabpanel" id="tab-panel73" class="tab-panel">
+					<p>탭 컨텐츠3</p>
+				</div>
+				<div role="tabpanel" id="tab-panel74" class="tab-panel">
+					<p>탭 컨텐츠4</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+</div>
+<!-- // wrap -->
+</body>
+</html>
+

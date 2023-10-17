@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$(function(){
+			
+			$('.click').bind({
+				taphold : function(){
+					// alert('long click');
+					$(this).addClass('active')
+				},
+				click : function(){
+					if($(this).hasClass('active')){
+						$(this).removeClass('active');
+					}
+				}
+			})
+
+			$('button').each(function(){
+				$(this).click(function(){
+					$(this).closest('.click').hide()
+				})
+			})
+			
+		})
+	</script>
+	<style>
+		.wrap{display:flex;flex-direction:row;gap:10px;}
+		.click{width:100%;height:100px;position:relative;background:rgb(223, 223, 223);border:1px solid grey;border-radius:5px}
+		.click:first-child{background:pink}
+		.click:last-child{background:skyblue}
+		.click button{display:none}
+		.click.active{animation: tilt-shaking 0.3s linear infinite;}
+		.click.active button{display:block;position:absolute;right:-5px;top:-5px;width:30px;height:30px}
+		@keyframes tilt-shaking {
+			0% { transform: rotate(0deg); }
+			25% { transform: rotate(3deg); }
+			50% { transform: rotate(0eg); }
+			75% { transform: rotate(-3deg); }
+			100% { transform: rotate(0deg); }
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="click"><button>X</button></div>
+		<div class="click"><button>X</button></div>
+		<div class="click"><button>X</button></div>
+	</div>
+</body>
+</html>

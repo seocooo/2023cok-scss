@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="NH Bank">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="no-index,follow">
+<title>Color | UI가이드</title>
+<!-- css -->
+<link rel="stylesheet" href="../../css/lib.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/common.css">
+
+<!-- javascript -->
+<script src="../../js/lib/jquery-3.6.4.min.js"></script>
+<script src="../../js/lib/sortable.js"></script>
+<script src="../../js/lib/swiper.min.js"></script>
+<script src="../../js/lib/modernizr.custom.min.js"></script>
+<script src="../../js/cock_ui.js"></script>
+</head>
+<body>
+
+<style>
+	.guide-list ul {
+		display: flex;
+		gap: 5px;
+	}
+
+	.guide-list ul li {
+		flex: 1;
+	}
+
+	.guide-list ul li>div {
+		width: 100%;
+		height: 60px;
+	}
+
+	.guide-list ul li>dl {
+		margin-top: 5px;
+		line-height: 1;
+		font-size: 12px;
+	}
+
+</style>
+<!-- wrap -->
+<div class="wrap">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header-start">
+            <h1>Color</h1>
+        </div>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="color-guide">
+			<div class="title-group">
+				<strong class="title">Primary</strong>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div style="background-color: var(--primary);"></div>
+						<dl>
+							<dt>--primary</dt>
+							<dd>--sapphire-01</dd>
+							<dd>#00AB5F</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--second);"></div>
+						<dl>
+							<dt>--second</dt>
+							<dd>--green-01</dd>
+							<dd>#09aa6a</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--third);"></div>
+						<dl>
+							<dt>--third</dt>
+							<dd>--blue-01</dd>
+							<dd>#4994eb</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--point);"></div>
+						<dl>
+							<dt>--point</dt>
+							<dd>--yellow-01</dd>
+							<dd>#fff152</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="color-guide">
+			<div class="title-group">
+				<strong class="title">Gray Scale</strong>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div style="background-color: var(--gray-00);"></div>
+						<dl>
+							<dt>--gray-00</dt>
+							<dd>#F5F6F8</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-01);"></div>
+						<dl>
+							<dt>--gray-01</dt>
+							<dd>#E4E7EB</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-02);"></div>
+						<dl>
+							<dt>--gray-02</dt>
+							<dd>#CBD2D9</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-03);"></div>
+						<dl>
+							<dt>--gray-03</dt>
+							<dd>#F5F6F8</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-04);"></div>
+						<dl>
+							<dt>--gray-04</dt>
+							<dd>#7B8794</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-05);"></div>
+						<dl>
+							<dt>--gray-05</dt>
+							<dd>#616E7C</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-06);"></div>
+						<dl>
+							<dt>--gray-06</dt>
+							<dd>#52606D</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-07);"></div>
+						<dl>
+							<dt>--gray-07</dt>
+							<dd>#3E4C59</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-08);"></div>
+						<dl>
+							<dt>--gray-08</dt>
+							<dd>#29353F</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--gray-09);"></div>
+						<dl>
+							<dt>--gray-09</dt>
+							<dd>#1F2933</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="color-guide">
+			<div class="title-group">
+				<strong class="title">Font</strong>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div style="background-color: var(--fc-01);"></div>
+						<dl>
+							<dt>--fc-01</dt>
+							<dd>--black</dd>
+							<dd>#111</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-02);"></div>
+						<dl>
+							<dt>--fc-02</dt>
+							<dd>--gray-07</dd>
+							<dd>#3E4C59</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-03);"></div>
+						<dl>
+							<dt>--fc-03</dt>
+							<dd>--gray-05</dd>
+							<dd>#616E7C</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-04);"></div>
+						<dl>
+							<dt>--fc-04</dt>
+							<dd>--gray-04</dd>
+							<dd>#7B8794</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-05);"></div>
+						<dl>
+							<dt>--fc-05</dt>
+							<dd>--sub-gray-02</dd>
+							<dd>#8C919B</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-06);"></div>
+						<dl>
+							<dt>--fc-06</dt>
+							<dd>--sub-gray-03</dd>
+							<dd>#8B8E92</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-07);"></div>
+						<dl>
+							<dt>--fc-07</dt>
+							<dd>--sapphire-01</dd>
+							<dd>#06a2ba</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-08);"></div>
+						<dl>
+							<dt>--fc-08</dt>
+							<dd>--red-01</dd>
+							<dd>#EA4956</dd>
+						</dl>
+					</li>
+					<li>
+						<div style="background-color: var(--fc-09);"></div>
+						<dl>
+							<dt>--fc-09</dt>
+							<dd>--sapphire-02</dd>
+							<dd>#038CA1</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="color-guide">
+			<div class="title-group">
+				<strong class="title">Line</strong>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div style="background-color: var(--lc-01);"></div>
+						<dl>
+							<dt>--lc-01</dt>
+							<dd>--sub-gray-01</dd>
+							<dd>#E5E5E5</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="color-guide">
+			<div class="title-group">
+				<strong class="title">Background</strong>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div style="background-color: var(--bgc-01);"></div>
+						<dl>
+							<dt>--bgc-01</dt>
+							<dd>--gray-00</dd>
+							<dd>#F5F6F8</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="color-guide">
+			<div class="title-group">
+				<strong class="title">Effects</strong>
+			</div>
+			<div class="guide-list">
+				<ul>
+					<li>
+						<div style="background-color: var(--white); box-shadow: var(--shadow-01);"></div>
+						<dl>
+							<dt>--shadow-01</dt>
+							<dd>0px 0px 20px 0px rgba(0, 0, 0, 0.15)</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+</div>
+<!-- // wrap -->
+
+</body>
+</html>
+>
